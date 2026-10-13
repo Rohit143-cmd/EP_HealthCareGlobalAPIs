@@ -1,0 +1,139 @@
+﻿using DbDemoProject.Data;
+using DbDemoProject.Model;
+using DbDemoProject.Service;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Identity.Client;
+
+namespace DbDemoProject.Controllers
+{
+    [Route("api/[Controller]")]
+    [ApiController]
+    public class AccountController : ControllerBase
+    {
+        private readonly IAccountService _accountService;
+        public AccountController(IAccountService account)
+        {
+            _accountService = account;
+        }
+        [Authorize]
+        [HttpGet("getActiveUsers")]
+        public IActionResult GetActiveUsers()
+        {
+            var result = _accountService.GetActiveUsers();
+            return Ok(result);
+        }
+        [Authorize]
+        [HttpGet("getDisabledUsers")]
+        public IActionResult GetDisabledUsers()
+        {
+            var result = _accountService.GetDisabledUsers();
+            return Ok(result);
+        }
+        [Authorize]
+        [HttpGet("getUserById/Userid")]
+        public IActionResult GetUserByID(Guid? Id)
+        {
+            var result = _accountService.GetUserByID(Id);
+            if (result != null)
+                return Ok(result);
+            return BadRequest();
+        }
+        [Authorize]
+        [HttpDelete("getUserById/Userid")]
+        public IActionResult DeleteUser(Guid? Id)
+        {
+            var result = _accountService.DeleteUser(Id);
+            if (result == 1)
+                return Ok(new ApiResponseDto
+                {
+                    Message = "User deleted...",
+                    Success = true
+                });
+            return BadRequest();
+        }
+        [HttpPost("registerUser")]
+        public IActionResult RegisterUser(RegisterUserRequest user)
+        {
+            var result = _accountService.RegisterUser(user);
+            if (result == 1)
+            {
+                return Ok(new ApiResponseDto
+                {
+                    Message = "Registration Successful...",
+                    Success = true
+                });
+            }
+            else if (result == 2)
+            {
+                return BadRequest(new ApiResponseDto
+                {
+                    Message = "Email Id already exists please enter different email...",
+                    Success = false
+
+                });
+            }
+            else
+            {
+                return BadRequest(new ApiResponseDto
+                {
+                    Message = "Bad request, please try after some time...",
+                    Success = false
+
+                });
+            }
+        }
+        [HttpPut("updateUser")]
+        [Authorize]
+        public IActionResult UpdateUser(Users user)
+        {
+            var result = _accountService.UpdateUser(user);
+            if (result == 1)
+            {
+                return Ok(new ApiResponseDto
+                {
+                    Message = "User data updated",
+                    Success = true
+                });
+            }
+            else if (result == 0)
+            {
+                return BadRequest(new ApiResponseDto
+                {
+                    Message = "Bad requeset, please try again...",
+                    Success = false
+
+                });
+            }
+            else
+            {
+                return BadRequest(new ApiResponseDto
+                {
+                    Message = "Bad request, please try after some time...",
+                    Success = false
+
+                });
+            }
+        }
+        [HttpPost("login")]
+        public IActionResult Login(LoginRequest loginRequest)
+        {
+            var result = _accountService.Login(loginRequest);
+            if (result.IsSuccess)
+                return Ok(new ApiResponseDto
+                {
+                    Message = result.Message,
+                    Success = result.IsSuccess,
+                    Data = result.user,
+                    Tokan = result.Token
+                });
+            else
+                return BadRequest(new ApiResponseDto
+                {
+                    Message = result.Message,
+                    Success = result.IsSuccess
+                });
+        }
+    }
+}

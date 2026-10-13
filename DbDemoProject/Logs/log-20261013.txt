@@ -1,0 +1,424 @@
+2026-10-13 15:30:56.843 +05:30 [INF] User profile is available. Using 'C:\Users\LT-491\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-13 15:30:57.210 +05:30 [INF] Now listening on: https://localhost:7071
+2026-10-13 15:30:57.214 +05:30 [INF] Now listening on: http://localhost:5075
+2026-10-13 15:30:57.472 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-13 15:30:57.477 +05:30 [INF] Hosting environment: Development
+2026-10-13 15:30:57.480 +05:30 [INF] Content root path: C:\Users\LT-491\Desktop\DbDemoProject\DbDemoProject
+2026-10-13 15:30:58.020 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/index.html - null null
+2026-10-13 15:30:58.657 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/_vs/browserLink - null null
+2026-10-13 15:30:58.657 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-13 15:30:58.663 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/index.html - 200 null text/html;charset=utf-8 679.8819ms
+2026-10-13 15:30:58.691 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - 200 14931 application/javascript; charset=utf-8 33.5027ms
+2026-10-13 15:30:58.776 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/_vs/browserLink - 200 null text/javascript; charset=UTF-8 118.1902ms
+2026-10-13 15:30:58.853 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - null null
+2026-10-13 15:30:58.905 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 53.163ms
+2026-10-13 15:31:05.197 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7071/api/Account/login - application/json 50
+2026-10-13 15:31:05.235 +05:30 [INF] CORS policy execution failed.
+2026-10-13 15:31:05.240 +05:30 [INF] Request origin https://localhost:7071 does not have permission to access the resource.
+2026-10-13 15:31:05.421 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 15:31:05.498 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(DbDemoProject.Model.LoginRequest) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-13 15:31:10.035 +05:30 [INF] Executed DbCommand (117ms) [Parameters=[@__loginRequest_UserName_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserUUID], [u].[EmailID], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[ProductUUID], [u].[RoleUUID], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginRequest_UserName_0 AND [u].[IsActive] = CAST(1 AS bit)
+2026-10-13 15:31:13.502 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.Login (DbDemoProject) in 7985.6972ms
+2026-10-13 15:31:13.528 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 15:31:13.534 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: something went wrong
+   at DbDemoProject.Controllers.AccountController.Login(LoginRequest loginRequest) in C:\Users\LT-491\Desktop\DbDemoProject\DbDemoProject\Controllers\AccountController.cs:line 141
+   at lambda_method3(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2026-10-13 15:31:14.847 +05:30 [ERR] An unhandled exception occurred. TraceId: 0HNP923G926E8:00000009
+System.InvalidOperationException: something went wrong
+   at DbDemoProject.Controllers.AccountController.Login(LoginRequest loginRequest) in C:\Users\LT-491\Desktop\DbDemoProject\DbDemoProject\Controllers\AccountController.cs:line 141
+   at lambda_method3(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2026-10-13 15:31:14.884 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7071/api/Account/login - 500 null application/json; charset=utf-8 9687.4014ms
+2026-10-13 15:33:07.479 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/index.html - null null
+2026-10-13 15:33:07.519 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/index.html - 200 null text/html;charset=utf-8 41.3767ms
+2026-10-13 15:33:07.533 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/_vs/browserLink - null null
+2026-10-13 15:33:07.534 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-13 15:33:07.554 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - 200 14931 application/javascript; charset=utf-8 22.7568ms
+2026-10-13 15:33:07.587 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/_vs/browserLink - 200 null text/javascript; charset=UTF-8 55.4375ms
+2026-10-13 15:33:07.631 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - null null
+2026-10-13 15:33:07.668 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 36.2698ms
+2026-10-13 15:33:13.126 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7071/api/Account/login - application/json 50
+2026-10-13 15:33:13.142 +05:30 [INF] CORS policy execution failed.
+2026-10-13 15:33:13.145 +05:30 [INF] Request origin https://localhost:7071 does not have permission to access the resource.
+2026-10-13 15:33:13.159 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 15:33:13.172 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(DbDemoProject.Model.LoginRequest) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-13 15:33:13.301 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@__loginRequest_UserName_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserUUID], [u].[EmailID], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[ProductUUID], [u].[RoleUUID], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginRequest_UserName_0 AND [u].[IsActive] = CAST(1 AS bit)
+2026-10-13 15:33:30.346 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.Login (DbDemoProject) in 17165.7813ms
+2026-10-13 15:33:30.349 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 15:33:30.353 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: something went wrong
+   at DbDemoProject.Controllers.AccountController.Login(LoginRequest loginRequest)
+   at lambda_method54(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2026-10-13 15:33:30.367 +05:30 [ERR] An unhandled exception occurred. TraceId: 0HNP923G926E9:00000009
+System.Exception: something went wrong
+   at DbDemoProject.Controllers.AccountController.Login(LoginRequest loginRequest)
+   at lambda_method54(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2026-10-13 15:33:30.383 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7071/api/Account/login - 500 null application/json; charset=utf-8 17256.7708ms
+2026-10-13 15:33:33.107 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7071/api/Account/login - application/json 50
+2026-10-13 15:33:33.117 +05:30 [INF] CORS policy execution failed.
+2026-10-13 15:33:33.121 +05:30 [INF] Request origin https://localhost:7071 does not have permission to access the resource.
+2026-10-13 15:33:33.135 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 15:33:33.141 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(DbDemoProject.Model.LoginRequest) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-13 15:33:33.326 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__loginRequest_UserName_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserUUID], [u].[EmailID], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[ProductUUID], [u].[RoleUUID], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginRequest_UserName_0 AND [u].[IsActive] = CAST(1 AS bit)
+2026-10-13 15:33:33.428 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.Login (DbDemoProject) in 284.3034ms
+2026-10-13 15:33:33.434 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 15:33:33.439 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: something went wrong
+   at DbDemoProject.Controllers.AccountController.Login(LoginRequest loginRequest)
+   at lambda_method54(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2026-10-13 15:33:33.451 +05:30 [ERR] An unhandled exception occurred. TraceId: 0HNP923G926E9:0000000B
+System.Exception: something went wrong
+   at DbDemoProject.Controllers.AccountController.Login(LoginRequest loginRequest)
+   at lambda_method54(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2026-10-13 15:33:33.466 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7071/api/Account/login - 500 null application/json; charset=utf-8 359.8668ms
+2026-10-13 15:33:37.687 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7071/api/Account/login - application/json 50
+2026-10-13 15:33:37.694 +05:30 [INF] CORS policy execution failed.
+2026-10-13 15:33:37.697 +05:30 [INF] Request origin https://localhost:7071 does not have permission to access the resource.
+2026-10-13 15:33:37.700 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 15:33:37.703 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(DbDemoProject.Model.LoginRequest) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-13 15:33:37.716 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__loginRequest_UserName_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserUUID], [u].[EmailID], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[ProductUUID], [u].[RoleUUID], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginRequest_UserName_0 AND [u].[IsActive] = CAST(1 AS bit)
+2026-10-13 15:33:37.805 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.Login (DbDemoProject) in 96.4422ms
+2026-10-13 15:33:37.809 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 15:33:37.814 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: something went wrong
+   at DbDemoProject.Controllers.AccountController.Login(LoginRequest loginRequest)
+   at lambda_method54(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2026-10-13 15:33:37.827 +05:30 [ERR] An unhandled exception occurred. TraceId: 0HNP923G926E9:0000000D
+System.Exception: something went wrong
+   at DbDemoProject.Controllers.AccountController.Login(LoginRequest loginRequest)
+   at lambda_method54(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2026-10-13 15:33:37.845 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7071/api/Account/login - 500 null application/json; charset=utf-8 157.9641ms
+2026-10-13 16:00:49.386 +05:30 [INF] User profile is available. Using 'C:\Users\LT-491\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-13 16:00:49.639 +05:30 [INF] Now listening on: https://localhost:7071
+2026-10-13 16:00:49.642 +05:30 [INF] Now listening on: http://localhost:5075
+2026-10-13 16:00:49.766 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-13 16:00:49.767 +05:30 [INF] Hosting environment: Development
+2026-10-13 16:00:49.769 +05:30 [INF] Content root path: C:\Users\LT-491\Desktop\DbDemoProject\DbDemoProject
+2026-10-13 16:00:50.557 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/index.html - null null
+2026-10-13 16:00:51.335 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/_vs/browserLink - null null
+2026-10-13 16:00:51.334 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-13 16:00:51.340 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/index.html - 200 null text/html;charset=utf-8 813.6142ms
+2026-10-13 16:00:51.370 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - 200 14931 application/javascript; charset=utf-8 37.2833ms
+2026-10-13 16:00:51.473 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/_vs/browserLink - 200 null text/javascript; charset=UTF-8 138.6549ms
+2026-10-13 16:00:51.548 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - null null
+2026-10-13 16:00:51.583 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 37.1843ms
+2026-10-13 16:01:04.745 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7071/api/Account/login - application/json 50
+2026-10-13 16:01:04.777 +05:30 [INF] CORS policy execution failed.
+2026-10-13 16:01:04.780 +05:30 [INF] Request origin https://localhost:7071 does not have permission to access the resource.
+2026-10-13 16:01:04.925 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 16:01:04.993 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(DbDemoProject.Model.LoginRequest) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-13 16:01:08.868 +05:30 [INF] Executed DbCommand (126ms) [Parameters=[@__loginRequest_UserName_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserUUID], [u].[EmailID], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[ProductUUID], [u].[RoleUUID], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginRequest_UserName_0 AND [u].[IsActive] = CAST(1 AS bit)
+2026-10-13 16:01:26.139 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.Login (DbDemoProject) in 21133.3408ms
+2026-10-13 16:01:26.144 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 16:01:26.148 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at Microsoft.AspNetCore.Identity.PasswordHasher`1.VerifyHashedPassword(TUser user, String hashedPassword, String providedPassword)
+   at DbDemoProject.Service.AccountService.Login(LoginRequest loginRequest) in C:\Users\LT-491\Desktop\DbDemoProject\DbDemoProject\Service\AccountService.cs:line 64
+   at DbDemoProject.Controllers.AccountController.Login(LoginRequest loginRequest) in C:\Users\LT-491\Desktop\DbDemoProject\DbDemoProject\Controllers\AccountController.cs:line 122
+   at lambda_method3(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2026-10-13 16:01:26.217 +05:30 [ERR] An unhandled exception occurred. TraceId: 0HNP92K6HQRGP:00000009
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at Microsoft.AspNetCore.Identity.PasswordHasher`1.VerifyHashedPassword(TUser user, String hashedPassword, String providedPassword)
+   at DbDemoProject.Service.AccountService.Login(LoginRequest loginRequest) in C:\Users\LT-491\Desktop\DbDemoProject\DbDemoProject\Service\AccountService.cs:line 64
+   at DbDemoProject.Controllers.AccountController.Login(LoginRequest loginRequest) in C:\Users\LT-491\Desktop\DbDemoProject\DbDemoProject\Controllers\AccountController.cs:line 122
+   at lambda_method3(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2026-10-13 16:01:26.271 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7071/api/Account/login - 500 null application/json; charset=utf-8 21526.2069ms
+2026-10-13 16:01:36.658 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7071/api/Account/login - application/json 50
+2026-10-13 16:01:36.669 +05:30 [INF] CORS policy execution failed.
+2026-10-13 16:01:36.671 +05:30 [INF] Request origin https://localhost:7071 does not have permission to access the resource.
+2026-10-13 16:01:36.677 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 16:01:36.683 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(DbDemoProject.Model.LoginRequest) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-13 16:01:36.746 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__loginRequest_UserName_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserUUID], [u].[EmailID], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[ProductUUID], [u].[RoleUUID], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginRequest_UserName_0 AND [u].[IsActive] = CAST(1 AS bit)
+2026-10-13 16:01:43.309 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.Login (DbDemoProject) in 6621.1718ms
+2026-10-13 16:01:43.316 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 16:01:43.322 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at Microsoft.AspNetCore.Identity.PasswordHasher`1.VerifyHashedPassword(TUser user, String hashedPassword, String providedPassword)
+   at DbDemoProject.Service.AccountService.Login(LoginRequest loginRequest) in C:\Users\LT-491\Desktop\DbDemoProject\DbDemoProject\Service\AccountService.cs:line 64
+   at DbDemoProject.Controllers.AccountController.Login(LoginRequest loginRequest) in C:\Users\LT-491\Desktop\DbDemoProject\DbDemoProject\Controllers\AccountController.cs:line 122
+   at lambda_method3(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2026-10-13 16:01:43.347 +05:30 [ERR] An unhandled exception occurred. TraceId: 0HNP92K6HQRGP:0000000B
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at Microsoft.AspNetCore.Identity.PasswordHasher`1.VerifyHashedPassword(TUser user, String hashedPassword, String providedPassword)
+   at DbDemoProject.Service.AccountService.Login(LoginRequest loginRequest) in C:\Users\LT-491\Desktop\DbDemoProject\DbDemoProject\Service\AccountService.cs:line 64
+   at DbDemoProject.Controllers.AccountController.Login(LoginRequest loginRequest) in C:\Users\LT-491\Desktop\DbDemoProject\DbDemoProject\Controllers\AccountController.cs:line 122
+   at lambda_method3(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2026-10-13 16:01:43.368 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7071/api/Account/login - 500 null application/json; charset=utf-8 6710.385ms
+2026-10-13 16:01:46.137 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7071/api/Account/login - application/json 50
+2026-10-13 16:01:46.147 +05:30 [INF] CORS policy execution failed.
+2026-10-13 16:01:46.150 +05:30 [INF] Request origin https://localhost:7071 does not have permission to access the resource.
+2026-10-13 16:01:46.160 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 16:01:46.164 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(DbDemoProject.Model.LoginRequest) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-13 16:01:46.420 +05:30 [INF] Executed DbCommand (41ms) [Parameters=[@__loginRequest_UserName_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserUUID], [u].[EmailID], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[ProductUUID], [u].[RoleUUID], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginRequest_UserName_0 AND [u].[IsActive] = CAST(1 AS bit)
+2026-10-13 16:01:46.491 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.Login (DbDemoProject) in 321.015ms
+2026-10-13 16:01:46.498 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 16:01:46.506 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at Microsoft.AspNetCore.Identity.PasswordHasher`1.VerifyHashedPassword(TUser user, String hashedPassword, String providedPassword)
+   at DbDemoProject.Service.AccountService.Login(LoginRequest loginRequest) in C:\Users\LT-491\Desktop\DbDemoProject\DbDemoProject\Service\AccountService.cs:line 64
+   at DbDemoProject.Controllers.AccountController.Login(LoginRequest loginRequest) in C:\Users\LT-491\Desktop\DbDemoProject\DbDemoProject\Controllers\AccountController.cs:line 122
+   at lambda_method3(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2026-10-13 16:01:46.525 +05:30 [ERR] An unhandled exception occurred. TraceId: 0HNP92K6HQRGP:0000000D
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at Microsoft.AspNetCore.Identity.PasswordHasher`1.VerifyHashedPassword(TUser user, String hashedPassword, String providedPassword)
+   at DbDemoProject.Service.AccountService.Login(LoginRequest loginRequest) in C:\Users\LT-491\Desktop\DbDemoProject\DbDemoProject\Service\AccountService.cs:line 64
+   at DbDemoProject.Controllers.AccountController.Login(LoginRequest loginRequest) in C:\Users\LT-491\Desktop\DbDemoProject\DbDemoProject\Controllers\AccountController.cs:line 122
+   at lambda_method3(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2026-10-13 16:01:46.543 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7071/api/Account/login - 500 null application/json; charset=utf-8 406.7596ms
