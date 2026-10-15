@@ -422,3 +422,612 @@ System.FormatException: The input is not a valid Base-64 string as it contains a
    at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
    at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
 2026-10-13 16:01:46.543 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7071/api/Account/login - 500 null application/json; charset=utf-8 406.7596ms
+2026-10-13 18:38:41.816 +05:30 [INF] User profile is available. Using 'C:\Users\LT-491\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-13 18:38:42.059 +05:30 [INF] Now listening on: https://localhost:7071
+2026-10-13 18:38:42.061 +05:30 [INF] Now listening on: http://localhost:5075
+2026-10-13 18:38:42.139 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-13 18:38:42.140 +05:30 [INF] Hosting environment: Development
+2026-10-13 18:38:42.141 +05:30 [INF] Content root path: C:\Users\LT-491\Desktop\EP_HealthCareGlobalAPIs\DbDemoProject
+2026-10-13 18:38:42.835 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/index.html - null null
+2026-10-13 18:38:43.175 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/index.html - 200 null text/html;charset=utf-8 351.7577ms
+2026-10-13 18:38:43.180 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-13 18:38:43.183 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/_vs/browserLink - null null
+2026-10-13 18:38:43.201 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - 200 14931 application/javascript; charset=utf-8 21.0184ms
+2026-10-13 18:38:43.258 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/_vs/browserLink - 200 null text/javascript; charset=UTF-8 75.6883ms
+2026-10-13 18:38:43.308 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - null null
+2026-10-13 18:38:43.341 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 34.1279ms
+2026-10-13 18:38:56.208 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7071/api/Account/login - application/json 51
+2026-10-13 18:38:56.219 +05:30 [INF] CORS policy execution failed.
+2026-10-13 18:38:56.220 +05:30 [INF] Request origin https://localhost:7071 does not have permission to access the resource.
+2026-10-13 18:38:57.668 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 18:38:57.704 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(DbDemoProject.Model.LoginRequest) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-13 18:39:00.276 +05:30 [INF] Executed DbCommand (75ms) [Parameters=[@__loginRequest_UserName_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserUUID], [u].[EmailID], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[ProductUUID], [u].[RoleUUID], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginRequest_UserName_0 AND [u].[IsActive] = CAST(1 AS bit)
+2026-10-13 18:39:15.116 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.Login (DbDemoProject) in 17401.2212ms
+2026-10-13 18:39:15.120 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 18:39:15.123 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DbDemoProject.Helper.JWTHelper.GenerateToken(Users user) in C:\Users\LT-491\Desktop\EP_HealthCareGlobalAPIs\DbDemoProject\Helper\JWTHelper.cs:line 21
+   at DbDemoProject.Service.AccountService.Login(LoginRequest loginRequest) in C:\Users\LT-491\Desktop\EP_HealthCareGlobalAPIs\DbDemoProject\Service\AccountService.cs:line 77
+   at DbDemoProject.Controllers.AccountController.Login(LoginRequest loginRequest) in C:\Users\LT-491\Desktop\EP_HealthCareGlobalAPIs\DbDemoProject\Controllers\AccountController.cs:line 122
+   at lambda_method3(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2026-10-13 18:39:15.156 +05:30 [ERR] An unhandled exception occurred. TraceId: 0HNP95CDFD7J0:00000009
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DbDemoProject.Helper.JWTHelper.GenerateToken(Users user) in C:\Users\LT-491\Desktop\EP_HealthCareGlobalAPIs\DbDemoProject\Helper\JWTHelper.cs:line 21
+   at DbDemoProject.Service.AccountService.Login(LoginRequest loginRequest) in C:\Users\LT-491\Desktop\EP_HealthCareGlobalAPIs\DbDemoProject\Service\AccountService.cs:line 77
+   at DbDemoProject.Controllers.AccountController.Login(LoginRequest loginRequest) in C:\Users\LT-491\Desktop\EP_HealthCareGlobalAPIs\DbDemoProject\Controllers\AccountController.cs:line 122
+   at lambda_method3(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2026-10-13 18:39:15.177 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7071/api/Account/login - 500 null application/json; charset=utf-8 18969.3472ms
+2026-10-13 18:39:54.871 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/index.html - null null
+2026-10-13 18:39:54.882 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/index.html - 200 null text/html;charset=utf-8 10.9025ms
+2026-10-13 18:39:54.894 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-13 18:39:54.894 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/_vs/browserLink - null null
+2026-10-13 18:39:54.898 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - 200 14931 application/javascript; charset=utf-8 4.4383ms
+2026-10-13 18:39:54.913 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.0571ms
+2026-10-13 18:39:54.952 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - null null
+2026-10-13 18:39:54.965 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.7884ms
+2026-10-13 18:40:05.682 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7071/api/Account/login - application/json 51
+2026-10-13 18:40:05.686 +05:30 [INF] CORS policy execution failed.
+2026-10-13 18:40:05.687 +05:30 [INF] Request origin https://localhost:7071 does not have permission to access the resource.
+2026-10-13 18:40:05.689 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 18:40:05.693 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(DbDemoProject.Model.LoginRequest) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-13 18:40:05.717 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__loginRequest_UserName_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserUUID], [u].[EmailID], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[ProductUUID], [u].[RoleUUID], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginRequest_UserName_0 AND [u].[IsActive] = CAST(1 AS bit)
+2026-10-13 18:40:30.697 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.Login (DbDemoProject) in 25003.1403ms
+2026-10-13 18:40:30.700 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 18:40:30.702 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'value')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.Security.Claims.Claim..ctor(String type, String value, String valueType, String issuer, String originalIssuer, ClaimsIdentity subject, String propertyKey, String propertyValue)
+   at System.Security.Claims.Claim..ctor(String type, String value)
+   at DbDemoProject.Helper.JWTHelper.GenerateToken(Users user)
+   at DbDemoProject.Service.AccountService.Login(LoginRequest loginRequest)
+   at DbDemoProject.Controllers.AccountController.Login(LoginRequest loginRequest)
+   at lambda_method54(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2026-10-13 18:40:30.707 +05:30 [ERR] An unhandled exception occurred. TraceId: 0HNP95CDFD7J0:00000013
+System.ArgumentNullException: Value cannot be null. (Parameter 'value')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.Security.Claims.Claim..ctor(String type, String value, String valueType, String issuer, String originalIssuer, ClaimsIdentity subject, String propertyKey, String propertyValue)
+   at System.Security.Claims.Claim..ctor(String type, String value)
+   at DbDemoProject.Helper.JWTHelper.GenerateToken(Users user)
+   at DbDemoProject.Service.AccountService.Login(LoginRequest loginRequest)
+   at DbDemoProject.Controllers.AccountController.Login(LoginRequest loginRequest)
+   at lambda_method54(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2026-10-13 18:40:30.713 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7071/api/Account/login - 500 null application/json; charset=utf-8 25031.313ms
+2026-10-13 18:41:02.791 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7071/api/Account/login - application/json 51
+2026-10-13 18:41:02.796 +05:30 [INF] CORS policy execution failed.
+2026-10-13 18:41:02.797 +05:30 [INF] Request origin https://localhost:7071 does not have permission to access the resource.
+2026-10-13 18:41:02.802 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 18:41:02.803 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(DbDemoProject.Model.LoginRequest) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-13 18:41:02.893 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__loginRequest_UserName_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserUUID], [u].[EmailID], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[ProductUUID], [u].[RoleUUID], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginRequest_UserName_0 AND [u].[IsActive] = CAST(1 AS bit)
+2026-10-13 18:42:34.574 +05:30 [INF] User profile is available. Using 'C:\Users\LT-491\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-13 18:42:34.743 +05:30 [INF] Now listening on: https://localhost:7071
+2026-10-13 18:42:34.744 +05:30 [INF] Now listening on: http://localhost:5075
+2026-10-13 18:42:34.818 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-13 18:42:34.820 +05:30 [INF] Hosting environment: Development
+2026-10-13 18:42:34.820 +05:30 [INF] Content root path: C:\Users\LT-491\Desktop\EP_HealthCareGlobalAPIs\DbDemoProject
+2026-10-13 18:42:35.099 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/index.html - null null
+2026-10-13 18:42:35.317 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/index.html - 200 null text/html;charset=utf-8 225.9569ms
+2026-10-13 18:42:35.319 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/_vs/browserLink - null null
+2026-10-13 18:42:35.319 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-13 18:42:35.332 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - 200 14931 application/javascript; charset=utf-8 13.2575ms
+2026-10-13 18:42:35.360 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.0513ms
+2026-10-13 18:42:35.407 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - null null
+2026-10-13 18:42:35.422 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.1965ms
+2026-10-13 18:42:47.895 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7071/api/Account/login - application/json 51
+2026-10-13 18:42:47.909 +05:30 [INF] CORS policy execution failed.
+2026-10-13 18:42:47.910 +05:30 [INF] Request origin https://localhost:7071 does not have permission to access the resource.
+2026-10-13 18:42:47.958 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 18:42:47.979 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(DbDemoProject.Model.LoginRequest) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-13 18:42:49.744 +05:30 [INF] Executed DbCommand (46ms) [Parameters=[@__loginRequest_UserName_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserUUID], [u].[EmailID], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[ProductUUID], [u].[RoleUUID], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginRequest_UserName_0 AND [u].[IsActive] = CAST(1 AS bit)
+2026-10-13 18:42:50.000 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__user_RoleUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleUUID], [r].[CreatedOn], [r].[IsActive], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleUUID] = @__user_RoleUUID_0
+2026-10-13 18:42:50.047 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__user_ProductUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ProductUUID], [p].[CreatedOn], [p].[IsActive], [p].[ProductName]
+FROM [Product] AS [p]
+WHERE [p].[ProductUUID] = @__user_ProductUUID_0
+2026-10-13 18:43:02.601 +05:30 [INF] Executing OkObjectResult, writing value of type 'DbDemoProject.Model.ApiResponseDto'.
+2026-10-13 18:43:02.633 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.Login (DbDemoProject) in 14648.4826ms
+2026-10-13 18:43:02.636 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 18:43:02.647 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7071/api/Account/login - 200 null application/json; charset=utf-8 14752.3337ms
+2026-10-13 18:43:24.915 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:43:24.981 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:43:24.985 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:43:24.988 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 73.2746ms
+2026-10-13 18:43:33.481 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:43:33.488 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:43:33.490 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:43:33.492 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 11.6394ms
+2026-10-13 18:43:34.078 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:43:34.089 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:43:34.090 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:43:34.091 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 12.8758ms
+2026-10-13 18:43:35.154 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:43:35.158 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:43:35.159 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:43:35.161 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 7.6049ms
+2026-10-13 18:43:52.203 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:43:52.207 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:43:52.209 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:43:52.210 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 7.2209ms
+2026-10-13 18:43:53.052 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:43:53.055 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:43:53.056 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:43:53.059 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 6.5866ms
+2026-10-13 18:43:53.666 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:43:53.671 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:43:53.672 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:43:53.673 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 7.0544ms
+2026-10-13 18:44:10.253 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getDisabledUsers - null null
+2026-10-13 18:44:10.259 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetDisabledUsers (DbDemoProject)'
+2026-10-13 18:44:10.262 +05:30 [INF] Route matched with {action = "GetDisabledUsers", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetDisabledUsers() on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-13 18:44:13.760 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserUUID], [u].[EmailID], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[ProductUUID], [u].[RoleUUID], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[IsActive] = CAST(0 AS bit)
+2026-10-13 18:44:13.763 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.Users, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-13 18:44:13.767 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetDisabledUsers (DbDemoProject) in 3503.4491ms
+2026-10-13 18:44:13.770 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetDisabledUsers (DbDemoProject)'
+2026-10-13 18:44:13.772 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getDisabledUsers - 200 null application/json; charset=utf-8 3518.9305ms
+2026-10-13 18:44:23.329 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:44:23.332 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:44:23.333 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:44:23.334 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 5.616ms
+2026-10-13 18:44:34.618 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:44:34.633 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:44:34.650 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-13 18:44:34.658 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 401 null null 40.6114ms
+2026-10-13 18:44:38.449 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:44:38.454 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:44:38.456 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-13 18:44:38.458 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 401 null null 9.5978ms
+2026-10-13 18:44:42.812 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:44:42.820 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:44:42.824 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:44:42.826 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 14.6498ms
+2026-10-13 18:44:50.867 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:44:50.870 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:44:50.872 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:44:50.873 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 5.3798ms
+2026-10-13 18:44:51.644 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:44:51.647 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:44:51.649 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:44:51.650 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 6.9714ms
+2026-10-13 18:44:52.307 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:44:52.315 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:44:52.316 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:44:52.317 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 9.9072ms
+2026-10-13 18:45:32.558 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:45:32.563 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:45:32.564 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:45:32.565 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 7.2464ms
+2026-10-13 18:45:33.174 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:45:33.178 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:45:33.184 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:45:33.186 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 12.0979ms
+2026-10-13 18:45:33.727 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:45:33.730 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:45:33.731 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:45:33.732 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 5.3547ms
+2026-10-13 18:45:46.848 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/index.html - null null
+2026-10-13 18:45:46.865 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/index.html - 200 null text/html;charset=utf-8 17.7457ms
+2026-10-13 18:45:46.869 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-13 18:45:46.870 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/_vs/browserLink - null null
+2026-10-13 18:45:46.873 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - 200 14931 application/javascript; charset=utf-8 4.1624ms
+2026-10-13 18:45:46.896 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/_vs/browserLink - 200 null text/javascript; charset=UTF-8 26.7175ms
+2026-10-13 18:45:46.925 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - null null
+2026-10-13 18:45:46.935 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.2626ms
+2026-10-13 18:46:02.228 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7071/api/Account/login - application/json 51
+2026-10-13 18:46:02.233 +05:30 [INF] CORS policy execution failed.
+2026-10-13 18:46:02.234 +05:30 [INF] Request origin https://localhost:7071 does not have permission to access the resource.
+2026-10-13 18:46:02.240 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 18:46:02.241 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(DbDemoProject.Model.LoginRequest) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-13 18:46:02.316 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__loginRequest_UserName_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserUUID], [u].[EmailID], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[ProductUUID], [u].[RoleUUID], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginRequest_UserName_0 AND [u].[IsActive] = CAST(1 AS bit)
+2026-10-13 18:46:02.432 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__user_RoleUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleUUID], [r].[CreatedOn], [r].[IsActive], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleUUID] = @__user_RoleUUID_0
+2026-10-13 18:46:02.441 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__user_ProductUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ProductUUID], [p].[CreatedOn], [p].[IsActive], [p].[ProductName]
+FROM [Product] AS [p]
+WHERE [p].[ProductUUID] = @__user_ProductUUID_0
+2026-10-13 18:46:04.796 +05:30 [INF] Executing OkObjectResult, writing value of type 'DbDemoProject.Model.ApiResponseDto'.
+2026-10-13 18:46:04.798 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.Login (DbDemoProject) in 2555.4793ms
+2026-10-13 18:46:04.800 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 18:46:04.801 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7071/api/Account/login - 200 null application/json; charset=utf-8 2573.1544ms
+2026-10-13 18:46:46.233 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:46:46.239 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:46:46.240 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:46:46.242 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 9.1253ms
+2026-10-13 18:46:49.165 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:46:49.168 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:46:49.175 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:46:49.176 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 11.2812ms
+2026-10-13 18:46:54.264 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:46:54.268 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:46:54.269 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:46:54.270 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 6.7472ms
+2026-10-13 18:46:55.128 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:46:55.131 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:46:55.132 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:46:55.133 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 5.0856ms
+2026-10-13 18:47:10.582 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:47:10.591 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:47:10.593 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:47:10.595 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 13.1856ms
+2026-10-13 18:48:42.150 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:48:42.155 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:48:42.156 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:48:42.157 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 7.2357ms
+2026-10-13 18:48:42.991 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:48:42.994 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:48:42.995 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:48:42.997 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 6.3246ms
+2026-10-13 18:48:46.098 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:48:46.102 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:48:46.103 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:48:46.104 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 5.9953ms
+2026-10-13 18:49:32.025 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:49:32.030 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:49:32.031 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:49:32.032 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 7.1381ms
+2026-10-13 18:50:30.491 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7071/api/Account/login - application/json 51
+2026-10-13 18:50:30.500 +05:30 [INF] CORS policy execution failed.
+2026-10-13 18:50:30.501 +05:30 [INF] Request origin https://localhost:7071 does not have permission to access the resource.
+2026-10-13 18:50:30.502 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 18:50:30.507 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(DbDemoProject.Model.LoginRequest) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-13 18:50:30.519 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__loginRequest_UserName_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserUUID], [u].[EmailID], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[ProductUUID], [u].[RoleUUID], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginRequest_UserName_0 AND [u].[IsActive] = CAST(1 AS bit)
+2026-10-13 18:50:30.603 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__user_RoleUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleUUID], [r].[CreatedOn], [r].[IsActive], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleUUID] = @__user_RoleUUID_0
+2026-10-13 18:50:30.610 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__user_ProductUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ProductUUID], [p].[CreatedOn], [p].[IsActive], [p].[ProductName]
+FROM [Product] AS [p]
+WHERE [p].[ProductUUID] = @__user_ProductUUID_0
+2026-10-13 18:51:35.292 +05:30 [INF] User profile is available. Using 'C:\Users\LT-491\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-13 18:51:35.467 +05:30 [INF] Now listening on: https://localhost:7071
+2026-10-13 18:51:35.468 +05:30 [INF] Now listening on: http://localhost:5075
+2026-10-13 18:51:35.534 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-13 18:51:35.536 +05:30 [INF] Hosting environment: Development
+2026-10-13 18:51:35.536 +05:30 [INF] Content root path: C:\Users\LT-491\Desktop\EP_HealthCareGlobalAPIs\DbDemoProject
+2026-10-13 18:51:35.944 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/index.html - null null
+2026-10-13 18:51:36.183 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/index.html - 200 null text/html;charset=utf-8 246.321ms
+2026-10-13 18:51:36.183 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/_vs/browserLink - null null
+2026-10-13 18:51:36.183 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-13 18:51:36.202 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - 200 14931 application/javascript; charset=utf-8 18.6505ms
+2026-10-13 18:51:36.232 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.5785ms
+2026-10-13 18:51:36.278 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - null null
+2026-10-13 18:51:36.296 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.2971ms
+2026-10-13 18:51:49.531 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7071/api/Account/login - application/json 51
+2026-10-13 18:51:49.545 +05:30 [INF] CORS policy execution failed.
+2026-10-13 18:51:49.546 +05:30 [INF] Request origin https://localhost:7071 does not have permission to access the resource.
+2026-10-13 18:51:49.615 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 18:51:49.648 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(DbDemoProject.Model.LoginRequest) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-13 18:51:51.421 +05:30 [INF] Executed DbCommand (34ms) [Parameters=[@__loginRequest_UserName_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserUUID], [u].[EmailID], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[ProductUUID], [u].[RoleUUID], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginRequest_UserName_0 AND [u].[IsActive] = CAST(1 AS bit)
+2026-10-13 18:51:51.676 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__user_RoleUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleUUID], [r].[CreatedOn], [r].[IsActive], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleUUID] = @__user_RoleUUID_0
+2026-10-13 18:51:51.740 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__user_ProductUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ProductUUID], [p].[CreatedOn], [p].[IsActive], [p].[ProductName]
+FROM [Product] AS [p]
+WHERE [p].[ProductUUID] = @__user_ProductUUID_0
+2026-10-13 18:51:58.632 +05:30 [INF] Executing OkObjectResult, writing value of type 'DbDemoProject.Model.ApiResponseDto'.
+2026-10-13 18:51:58.674 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.Login (DbDemoProject) in 9018.2923ms
+2026-10-13 18:51:58.676 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 18:51:58.689 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7071/api/Account/login - 200 null application/json; charset=utf-8 9157.768ms
+2026-10-13 18:52:18.323 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:52:18.380 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:52:18.386 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:52:18.388 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 64.9073ms
+2026-10-13 18:52:32.452 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:52:32.458 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:52:32.461 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:52:32.462 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 11.1956ms
+2026-10-13 18:54:18.088 +05:30 [INF] User profile is available. Using 'C:\Users\LT-491\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-13 18:54:18.258 +05:30 [INF] Now listening on: https://localhost:7071
+2026-10-13 18:54:18.259 +05:30 [INF] Now listening on: http://localhost:5075
+2026-10-13 18:54:18.328 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-13 18:54:18.329 +05:30 [INF] Hosting environment: Development
+2026-10-13 18:54:18.330 +05:30 [INF] Content root path: C:\Users\LT-491\Desktop\EP_HealthCareGlobalAPIs\DbDemoProject
+2026-10-13 18:54:18.942 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/index.html - null null
+2026-10-13 18:54:19.119 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-13 18:54:19.119 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/_vs/browserLink - null null
+2026-10-13 18:54:19.123 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/index.html - 200 null text/html;charset=utf-8 188.2819ms
+2026-10-13 18:54:19.130 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - 200 14931 application/javascript; charset=utf-8 11.6435ms
+2026-10-13 18:54:19.161 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.46ms
+2026-10-13 18:54:19.206 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - null null
+2026-10-13 18:54:19.241 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 35.0303ms
+2026-10-13 18:54:39.338 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7071/api/Account/login - application/json 51
+2026-10-13 18:54:39.354 +05:30 [INF] CORS policy execution failed.
+2026-10-13 18:54:39.356 +05:30 [INF] Request origin https://localhost:7071 does not have permission to access the resource.
+2026-10-13 18:54:39.419 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 18:54:39.463 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(DbDemoProject.Model.LoginRequest) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-13 18:54:41.097 +05:30 [INF] Executed DbCommand (33ms) [Parameters=[@__loginRequest_UserName_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserUUID], [u].[EmailID], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[ProductUUID], [u].[RoleUUID], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginRequest_UserName_0 AND [u].[IsActive] = CAST(1 AS bit)
+2026-10-13 18:54:41.352 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__user_RoleUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleUUID], [r].[CreatedOn], [r].[IsActive], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleUUID] = @__user_RoleUUID_0
+2026-10-13 18:54:41.416 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__user_ProductUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ProductUUID], [p].[CreatedOn], [p].[IsActive], [p].[ProductName]
+FROM [Product] AS [p]
+WHERE [p].[ProductUUID] = @__user_ProductUUID_0
+2026-10-13 18:54:44.880 +05:30 [INF] Executing OkObjectResult, writing value of type 'DbDemoProject.Model.ApiResponseDto'.
+2026-10-13 18:54:44.910 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.Login (DbDemoProject) in 5441.2273ms
+2026-10-13 18:54:44.912 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 18:54:44.924 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7071/api/Account/login - 200 null application/json; charset=utf-8 5585.5119ms
+2026-10-13 18:55:04.499 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:55:04.568 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetActiveUsers (DbDemoProject)'
+2026-10-13 18:55:04.573 +05:30 [INF] Route matched with {action = "GetActiveUsers", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetActiveUsers() on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-13 18:55:04.606 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserUUID], [u].[EmailID], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[ProductUUID], [u].[RoleUUID], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[IsActive] = CAST(1 AS bit)
+2026-10-13 18:55:04.611 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.Users, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-13 18:55:04.615 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetActiveUsers (DbDemoProject) in 38.5852ms
+2026-10-13 18:55:04.617 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetActiveUsers (DbDemoProject)'
+2026-10-13 18:55:04.618 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 200 null application/json; charset=utf-8 120.3388ms
+2026-10-13 18:55:28.916 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:55:28.929 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetActiveUsers (DbDemoProject)'
+2026-10-13 18:55:28.931 +05:30 [INF] Route matched with {action = "GetActiveUsers", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetActiveUsers() on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-13 18:55:29.015 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserUUID], [u].[EmailID], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[ProductUUID], [u].[RoleUUID], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[IsActive] = CAST(1 AS bit)
+2026-10-13 18:55:29.019 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.Users, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-13 18:55:29.021 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetActiveUsers (DbDemoProject) in 88.4822ms
+2026-10-13 18:55:29.059 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetActiveUsers (DbDemoProject)'
+2026-10-13 18:55:29.061 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 200 null application/json; charset=utf-8 145.7062ms
+2026-10-13 18:55:29.976 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:55:29.982 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetActiveUsers (DbDemoProject)'
+2026-10-13 18:55:29.984 +05:30 [INF] Route matched with {action = "GetActiveUsers", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetActiveUsers() on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-13 18:55:29.987 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserUUID], [u].[EmailID], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[ProductUUID], [u].[RoleUUID], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[IsActive] = CAST(1 AS bit)
+2026-10-13 18:55:29.990 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.Users, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-13 18:55:29.991 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetActiveUsers (DbDemoProject) in 5.9953ms
+2026-10-13 18:55:29.993 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetActiveUsers (DbDemoProject)'
+2026-10-13 18:55:29.995 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 200 null application/json; charset=utf-8 18.9111ms
+2026-10-13 18:55:35.820 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:55:35.825 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:55:35.831 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-13 18:55:35.833 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 401 0 null 14.0123ms
+2026-10-13 18:55:39.750 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7071/api/Account/login - application/json 51
+2026-10-13 18:55:39.755 +05:30 [INF] CORS policy execution failed.
+2026-10-13 18:55:39.756 +05:30 [INF] Request origin https://localhost:7071 does not have permission to access the resource.
+2026-10-13 18:55:39.757 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 18:55:39.758 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(DbDemoProject.Model.LoginRequest) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-13 18:55:39.768 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__loginRequest_UserName_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserUUID], [u].[EmailID], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[ProductUUID], [u].[RoleUUID], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginRequest_UserName_0 AND [u].[IsActive] = CAST(1 AS bit)
+2026-10-13 18:55:39.853 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__user_RoleUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleUUID], [r].[CreatedOn], [r].[IsActive], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleUUID] = @__user_RoleUUID_0
+2026-10-13 18:55:39.861 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__user_ProductUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ProductUUID], [p].[CreatedOn], [p].[IsActive], [p].[ProductName]
+FROM [Product] AS [p]
+WHERE [p].[ProductUUID] = @__user_ProductUUID_0
+2026-10-13 18:55:39.864 +05:30 [INF] Executing OkObjectResult, writing value of type 'DbDemoProject.Model.ApiResponseDto'.
+2026-10-13 18:55:39.865 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.Login (DbDemoProject) in 105.0285ms
+2026-10-13 18:55:39.866 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 18:55:39.867 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7071/api/Account/login - 200 null application/json; charset=utf-8 118.4163ms
+2026-10-13 18:56:09.070 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:56:09.076 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:56:09.078 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:56:09.080 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 10.9713ms
+2026-10-13 18:56:14.775 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:56:14.778 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:56:14.779 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:56:14.781 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 5.2674ms
+2026-10-13 18:56:15.364 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:56:15.368 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:56:15.369 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:56:15.370 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 5.8063ms
+2026-10-13 18:56:19.729 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getDisabledUsers - null null
+2026-10-13 18:56:19.733 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetDisabledUsers (DbDemoProject)'
+2026-10-13 18:56:19.736 +05:30 [INF] Route matched with {action = "GetDisabledUsers", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetDisabledUsers() on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-13 18:56:19.747 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserUUID], [u].[EmailID], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[ProductUUID], [u].[RoleUUID], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[IsActive] = CAST(0 AS bit)
+2026-10-13 18:56:19.749 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.Users, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-13 18:56:19.750 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetDisabledUsers (DbDemoProject) in 12.6663ms
+2026-10-13 18:56:19.752 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetDisabledUsers (DbDemoProject)'
+2026-10-13 18:56:19.753 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getDisabledUsers - 200 null application/json; charset=utf-8 24.9996ms
+2026-10-13 18:56:24.472 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:56:24.475 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:56:24.477 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:56:24.478 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 5.6261ms
+2026-10-13 18:56:46.190 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:56:46.195 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:56:46.197 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:56:46.198 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 9.1682ms
+2026-10-13 18:56:50.008 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:56:50.011 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pharmacists)
+2026-10-13 18:56:50.012 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-13 18:56:50.012 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 403 0 null 5.3256ms
+2026-10-13 18:56:54.265 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/index.html - null null
+2026-10-13 18:56:54.279 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/index.html - 200 null text/html;charset=utf-8 15.0908ms
+2026-10-13 18:56:54.292 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-13 18:56:54.293 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/_vs/browserLink - null null
+2026-10-13 18:56:54.296 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - 200 14931 application/javascript; charset=utf-8 3.8842ms
+2026-10-13 18:56:54.320 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/_vs/browserLink - 200 null text/javascript; charset=UTF-8 28.0684ms
+2026-10-13 18:56:54.416 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - null null
+2026-10-13 18:56:54.429 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.1602ms
+2026-10-13 18:56:58.880 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:56:58.883 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2026-10-13 18:56:58.885 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-13 18:56:58.886 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 401 0 null 6.8754ms
+2026-10-13 18:57:33.936 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7071/api/Account/login - application/json 51
+2026-10-13 18:57:33.941 +05:30 [INF] CORS policy execution failed.
+2026-10-13 18:57:33.942 +05:30 [INF] Request origin https://localhost:7071 does not have permission to access the resource.
+2026-10-13 18:57:33.943 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 18:57:33.947 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(DbDemoProject.Model.LoginRequest) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-13 18:57:33.961 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__loginRequest_UserName_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserUUID], [u].[EmailID], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[ProductUUID], [u].[RoleUUID], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginRequest_UserName_0 AND [u].[IsActive] = CAST(1 AS bit)
+2026-10-13 18:57:34.074 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__user_RoleUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleUUID], [r].[CreatedOn], [r].[IsActive], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleUUID] = @__user_RoleUUID_0
+2026-10-13 18:57:34.081 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__user_ProductUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ProductUUID], [p].[CreatedOn], [p].[IsActive], [p].[ProductName]
+FROM [Product] AS [p]
+WHERE [p].[ProductUUID] = @__user_ProductUUID_0
+2026-10-13 18:57:34.084 +05:30 [INF] Executing OkObjectResult, writing value of type 'DbDemoProject.Model.ApiResponseDto'.
+2026-10-13 18:57:34.092 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.Login (DbDemoProject) in 143.0883ms
+2026-10-13 18:57:34.094 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-13 18:57:34.094 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7071/api/Account/login - 200 null application/json; charset=utf-8 158.4415ms
+2026-10-13 18:57:52.929 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-13 18:57:52.932 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetActiveUsers (DbDemoProject)'
+2026-10-13 18:57:52.934 +05:30 [INF] Route matched with {action = "GetActiveUsers", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetActiveUsers() on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-13 18:57:52.942 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserUUID], [u].[EmailID], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[ProductUUID], [u].[RoleUUID], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[IsActive] = CAST(1 AS bit)
+2026-10-13 18:57:52.943 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.Users, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-13 18:57:52.945 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetActiveUsers (DbDemoProject) in 9.1583ms
+2026-10-13 18:57:52.948 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetActiveUsers (DbDemoProject)'
+2026-10-13 18:57:52.948 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 200 null application/json; charset=utf-8 20.2873ms
+2026-10-13 18:58:07.522 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getDisabledUsers - null null
+2026-10-13 18:58:07.526 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetDisabledUsers (DbDemoProject)'
+2026-10-13 18:58:07.528 +05:30 [INF] Route matched with {action = "GetDisabledUsers", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetDisabledUsers() on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-13 18:58:07.532 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserUUID], [u].[EmailID], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[ProductUUID], [u].[RoleUUID], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[IsActive] = CAST(0 AS bit)
+2026-10-13 18:58:07.534 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.Users, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-13 18:58:07.537 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetDisabledUsers (DbDemoProject) in 7.042ms
+2026-10-13 18:58:07.538 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetDisabledUsers (DbDemoProject)'
+2026-10-13 18:58:07.540 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getDisabledUsers - 200 null application/json; charset=utf-8 18.3212ms

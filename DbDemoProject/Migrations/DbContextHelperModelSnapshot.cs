@@ -22,6 +22,44 @@ namespace DbDemoProject.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("DbDemoProject.Model.NavigationMenu", b =>
+                {
+                    b.Property<Guid?>("NavigationMenuUUID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("DisplayName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsParent")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Order")
+                        .HasColumnType("int");
+
+                    b.Property<Guid?>("ParentUUID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("RoleUUID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("URL")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.HasKey("NavigationMenuUUID");
+
+                    b.HasIndex("RoleUUID");
+
+                    b.ToTable("NavigationMenu");
+                });
+
             modelBuilder.Entity("DbDemoProject.Model.Product", b =>
                 {
                     b.Property<Guid?>("ProductUUID")
@@ -79,6 +117,9 @@ namespace DbDemoProject.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
+                    b.Property<Guid>("NavigationMenuUUID")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("PasswordHash")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -101,6 +142,8 @@ namespace DbDemoProject.Migrations
 
                     b.HasKey("UserUUID");
 
+                    b.HasIndex("NavigationMenuUUID");
+
                     b.HasIndex("ProductUUID");
 
                     b.HasIndex("RoleUUID");
@@ -108,8 +151,23 @@ namespace DbDemoProject.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("DbDemoProject.Model.NavigationMenu", b =>
+                {
+                    b.HasOne("DbDemoProject.Model.UserRoles", "Role")
+                        .WithMany()
+                        .HasForeignKey("RoleUUID");
+
+                    b.Navigation("Role");
+                });
+
             modelBuilder.Entity("DbDemoProject.Model.Users", b =>
                 {
+                    b.HasOne("DbDemoProject.Model.NavigationMenu", "navigationMenu")
+                        .WithMany()
+                        .HasForeignKey("NavigationMenuUUID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("DbDemoProject.Model.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductUUID");
@@ -121,6 +179,8 @@ namespace DbDemoProject.Migrations
                     b.Navigation("Product");
 
                     b.Navigation("Role");
+
+                    b.Navigation("navigationMenu");
                 });
 #pragma warning restore 612, 618
         }

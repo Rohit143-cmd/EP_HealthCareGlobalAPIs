@@ -21,7 +21,8 @@ namespace DbDemoProject.Helper
                 var claims = new[]
                 {
             new Claim(ClaimTypes.NameIdentifier, user.UserUUID.ToString()),
-            new Claim(ClaimTypes.Name, user.UserName)
+            new Claim(ClaimTypes.Name, user.UserName),
+            new Claim(ClaimTypes.Role, user.Role!=null? user.Role.RoleName: null)
         };
 
                 var key = new SymmetricSecurityKey(

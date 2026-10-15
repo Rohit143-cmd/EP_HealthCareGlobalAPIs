@@ -1,6 +1,8 @@
 ﻿using DbDemoProject.Data;
+using DbDemoProject.Helper;
 using DbDemoProject.Model;
 using DbDemoProject.Service;
+using DbDemoProject.Service.Account;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,11 +15,13 @@ namespace DbDemoProject.Controllers
     public class AccountController : ControllerBase
     {
         private readonly IAccountService _accountService;
-        public AccountController(IAccountService account)
+        private readonly INavigationMenuService _navigationMenuService;
+        public AccountController(IAccountService account, INavigationMenuService navigationMenuService)
         {
             _accountService = account;
+            _navigationMenuService = navigationMenuService;
         }
-        [Authorize]
+        [Authorize(Roles = $"{nameof(UserRoleEnum.SuperAdmin)},{nameof(UserRoleEnum.MasterAdmin)}")]
         [HttpGet("getActiveUsers")]
         public IActionResult GetActiveUsers()
         {
@@ -116,6 +120,14 @@ namespace DbDemoProject.Controllers
                 });
             }
         }
+        [HttpGet("getProductUserDetails")]
+        public IActionResult GetProductUserDetails([FromQuery] Guid? userUUID)
+        {
+            var result = _navigationMenuService.GetActiveMenu();
+
+            return Ok(result);
+        }
+
         [HttpPost("login")]
         public IActionResult Login(LoginRequest loginRequest)
         {

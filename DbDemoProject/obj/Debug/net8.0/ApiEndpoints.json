@@ -21,6 +21,22 @@
   },
   {
     "ContainingType": "DbDemoProject.Controllers.AccountController",
+    "Method": "GetProductUserDetails",
+    "RelativePath": "api/Account/getProductUserDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userUUID",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbDemoProject.Controllers.AccountController",
     "Method": "GetUserByID",
     "RelativePath": "api/Account/getUserById/Userid",
     "HttpMethod": "GET",

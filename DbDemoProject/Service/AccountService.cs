@@ -24,7 +24,7 @@ namespace DbDemoProject.Service
         {
             if (userid != null)
             {
-                var user = _dbContextHelper.Users.Where(a=>a.UserUUID==userid).FirstOrDefault();
+                var user = _dbContextHelper.Users.Where(a=>a.UserUUID == userid).FirstOrDefault();
                 if (user != null)
                 {
                     user.IsActive = false;
@@ -58,6 +58,7 @@ namespace DbDemoProject.Service
 
         public LoginResponseDto? Login(LoginRequest loginRequest)
         {
+            string token = null;
             var user = _dbContextHelper.Users.Where(a => a.UserName == loginRequest.UserName && a.IsActive==true).FirstOrDefault();
             if (user!=null)
             {
@@ -74,14 +75,16 @@ namespace DbDemoProject.Service
                         Message = "Username or Password Invalid..."
                     };
                 }
-                var token = _jwtService.GenerateToken(user);
+                
                 var userrole = _dbContextHelper.Roles.Where(role => role.RoleUUID == user.RoleUUID).FirstOrDefault();
                 var product = _dbContextHelper.Product.Where(p => p.ProductUUID == user.ProductUUID).FirstOrDefault();
                 if(userrole!=null && product != null)
                 {
                     user.Role = userrole;
                     user.Product = product;
-                }else
+                    token = _jwtService.GenerateToken(user);
+                }
+                else
                     return new LoginResponseDto{
                         IsSuccess = false,
                         Message = "Product or Role not found..."
@@ -92,7 +95,7 @@ namespace DbDemoProject.Service
                     user = user,
                     Token = token,
                     IsSuccess = true,
-                    Message = "Success"
+                    Message = "success"
                 };
             }
             return new LoginResponseDto

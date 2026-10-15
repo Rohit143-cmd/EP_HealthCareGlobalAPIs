@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Serilog;
+using System.Security.Claims;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -92,12 +93,14 @@ builder.Services
 
                 ValidAudience = jwtAudience,
 
-
+                
                 IssuerSigningKey =
                     new SymmetricSecurityKey(
                         Encoding.UTF8.GetBytes(jwtKey)
-                    )
+                    ),
+                RoleClaimType = ClaimTypes.Role,
             };
+
     });
 
 
@@ -113,10 +116,9 @@ builder.Services.AddAuthorization();
 // ======================================================
 
 // Account Service
-builder.Services.AddScoped<
-    IAccountService,
-    AccountService
->();
+builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<INavigationMenuService, NavigationMenuService>();
+builder.Services.AddScoped<INavigationMenuRepository, NavigationMenuRepository>();
 
 
 // Password Hasher
@@ -132,6 +134,7 @@ builder.Services.AddScoped<
     IRoleRepository,
    RoleRepository
 >();
+
 
 
 // JWT Helper

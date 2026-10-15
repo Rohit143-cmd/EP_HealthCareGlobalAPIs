@@ -13,8 +13,6 @@ namespace DbDemoProject.Data
         public DbSet<Users> Users { get; set; }
         public DbSet<UserRoles> Roles { get; set; }
         public DbSet<Product> Product { get; set; }
-
-
-
+        public DbSet<NavigationMenu> NavigationMenu { get; set; }
     }
 }
