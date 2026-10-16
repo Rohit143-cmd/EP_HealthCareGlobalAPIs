@@ -1,12 +1,44 @@
 [
   {
     "ContainingType": "DbDemoProject.Controllers.AccountController",
+    "Method": "DeleteUser",
+    "RelativePath": "api/Account/deleteUser/{userUUID}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userUUID",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbDemoProject.Controllers.AccountController",
     "Method": "GetActiveUsers",
     "RelativePath": "api/Account/getActiveUsers",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbDemoProject.Controllers.AccountController",
+    "Method": "GetDashboardItem",
+    "RelativePath": "api/Account/getDashboard",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleUUID",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -28,7 +60,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "userUUID",
+        "Name": "roleUUID",
         "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       }
@@ -40,22 +72,6 @@
     "Method": "GetUserByID",
     "RelativePath": "api/Account/getUserById/Userid",
     "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "Id",
-        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "DbDemoProject.Controllers.AccountController",
-    "Method": "DeleteUser",
-    "RelativePath": "api/Account/getUserById/Userid",
-    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -109,7 +125,7 @@
     "Parameters": [
       {
         "Name": "user",
-        "Type": "DbDemoProject.Model.Users",
+        "Type": "DbDemoProject.Model.RegisterUserRequest",
         "IsRequired": true
       }
     ],

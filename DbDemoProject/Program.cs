@@ -119,6 +119,7 @@ builder.Services.AddAuthorization();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<INavigationMenuService, NavigationMenuService>();
 builder.Services.AddScoped<INavigationMenuRepository, NavigationMenuRepository>();
+builder.Services.AddScoped<IDashbordItems, DashboardItemService>();
 
 
 // Password Hasher

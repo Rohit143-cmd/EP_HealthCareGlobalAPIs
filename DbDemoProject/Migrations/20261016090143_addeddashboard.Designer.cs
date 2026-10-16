@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DbDemoProject.Migrations
 {
     [DbContext(typeof(DbContextHelper))]
-    [Migration("20261013081646_addedproduct")]
-    partial class addedproduct
+    [Migration("20261016090143_addeddashboard")]
+    partial class addeddashboard
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,6 +24,86 @@ namespace DbDemoProject.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("DbDemoProject.Model.Data.Model.Dashboard", b =>
+                {
+                    b.Property<Guid?>("DashbordUUID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("RoleUUID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("gradient")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("icon")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("id")
+                        .HasColumnType("int");
+
+                    b.Property<string>("nameofTableCount")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("shadowColor")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("value")
+                        .HasColumnType("int");
+
+                    b.Property<string>("viewAllURL")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("DashbordUUID");
+
+                    b.HasIndex("RoleUUID");
+
+                    b.ToTable("DashboardItems");
+                });
+
+            modelBuilder.Entity("DbDemoProject.Model.NavigationMenu", b =>
+                {
+                    b.Property<Guid?>("NavigationMenuUUID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("DisplayName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsParent")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Order")
+                        .HasColumnType("int");
+
+                    b.Property<Guid?>("ParentUUID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("RoleUUID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("URL")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.HasKey("NavigationMenuUUID");
+
+                    b.HasIndex("RoleUUID");
+
+                    b.ToTable("NavigationMenu");
+                });
 
             modelBuilder.Entity("DbDemoProject.Model.Product", b =>
                 {
@@ -79,8 +159,17 @@ namespace DbDemoProject.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PasswordHash")
                         .IsRequired()
@@ -88,8 +177,7 @@ namespace DbDemoProject.Migrations
 
                     b.Property<string>("PhoneNumber")
                         .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid?>("ProductUUID")
                         .HasColumnType("uniqueidentifier");
@@ -109,6 +197,24 @@ namespace DbDemoProject.Migrations
                     b.HasIndex("RoleUUID");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("DbDemoProject.Model.Data.Model.Dashboard", b =>
+                {
+                    b.HasOne("DbDemoProject.Model.UserRoles", "Role")
+                        .WithMany()
+                        .HasForeignKey("RoleUUID");
+
+                    b.Navigation("Role");
+                });
+
+            modelBuilder.Entity("DbDemoProject.Model.NavigationMenu", b =>
+                {
+                    b.HasOne("DbDemoProject.Model.UserRoles", "Role")
+                        .WithMany()
+                        .HasForeignKey("RoleUUID");
+
+                    b.Navigation("Role");
                 });
 
             modelBuilder.Entity("DbDemoProject.Model.Users", b =>

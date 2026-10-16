@@ -49,15 +49,18 @@
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/api/Account/deleteUser/{userUUID}": {
       "delete": {
         "tags": [
           "Account"
         ],
         "parameters": [
           {
-            "name": "Id",
-            "in": "query",
+            "name": "userUUID",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -111,17 +114,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Users"
+                "$ref": "#/components/schemas/RegisterUserRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Users"
+                "$ref": "#/components/schemas/RegisterUserRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Users"
+                "$ref": "#/components/schemas/RegisterUserRequest"
               }
             }
           }
@@ -140,7 +143,29 @@
         ],
         "parameters": [
           {
-            "name": "userUUID",
+            "name": "roleUUID",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Account/getDashboard": {
+      "get": {
+        "tags": [
+          "Account"
+        ],
+        "parameters": [
+          {
+            "name": "roleUUID",
             "in": "query",
             "schema": {
               "type": "string",
@@ -323,35 +348,14 @@
         },
         "additionalProperties": false
       },
-      "Product": {
-        "required": [
-          "productName"
-        ],
+      "RegisterUserRequest": {
         "type": "object",
         "properties": {
-          "productUUID": {
+          "userUUID": {
             "type": "string",
             "format": "uuid",
             "nullable": true
           },
-          "productName": {
-            "maxLength": 100,
-            "minLength": 0,
-            "type": "string"
-          },
-          "createdOn": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "isActive": {
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "RegisterUserRequest": {
-        "type": "object",
-        "properties": {
           "userName": {
             "type": "string",
             "nullable": true
@@ -375,6 +379,11 @@
           "phonenumeber": {
             "type": "string",
             "nullable": true
+          },
+          "roleUUID": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -393,62 +402,6 @@
           "createdOn": {
             "type": "string",
             "format": "date-time"
-          },
-          "isActive": {
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Users": {
-        "required": [
-          "phoneNumber",
-          "userName"
-        ],
-        "type": "object",
-        "properties": {
-          "userUUID": {
-            "type": "string",
-            "format": "uuid",
-            "nullable": true
-          },
-          "roleUUID": {
-            "type": "string",
-            "format": "uuid",
-            "nullable": true
-          },
-          "role": {
-            "$ref": "#/components/schemas/UserRoles"
-          },
-          "productUUID": {
-            "type": "string",
-            "format": "uuid",
-            "nullable": true
-          },
-          "product": {
-            "$ref": "#/components/schemas/Product"
-          },
-          "userName": {
-            "maxLength": 100,
-            "minLength": 0,
-            "type": "string",
-            "format": "email"
-          },
-          "emailID": {
-            "maxLength": 100,
-            "minLength": 0,
-            "type": "string",
-            "format": "email",
-            "nullable": true
-          },
-          "phoneNumber": {
-            "maxLength": 10,
-            "minLength": 0,
-            "type": "string"
-          },
-          "passwordHash": {
-            "type": "string",
-            "nullable": true
           },
           "isActive": {
             "type": "boolean"

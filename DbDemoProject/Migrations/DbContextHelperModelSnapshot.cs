@@ -22,6 +22,191 @@ namespace DbDemoProject.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("DbDemoProject.Model.Data.Model.AppointmentModel", b =>
+                {
+                    b.Property<Guid>("AppointmentUUID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("AppointmentDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("AppointmentType")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("MemberUUID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<DateTime?>("UpdatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("AppointmentUUID");
+
+                    b.ToTable("Appointments");
+                });
+
+            modelBuilder.Entity("DbDemoProject.Model.Data.Model.Dashboard", b =>
+                {
+                    b.Property<Guid?>("DashbordUUID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("RoleUUID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("buttonLabel")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("gradient")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("icon")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("id")
+                        .HasColumnType("int");
+
+                    b.Property<string>("nameofTableCount")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("shadowColor")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("value")
+                        .HasColumnType("int");
+
+                    b.Property<string>("viewAllURL")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("DashbordUUID");
+
+                    b.HasIndex("RoleUUID");
+
+                    b.ToTable("DashboardItems");
+                });
+
+            modelBuilder.Entity("DbDemoProject.Model.Data.Model.MemberModel", b =>
+                {
+                    b.Property<Guid?>("MemberUUID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Address")
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DateOfBirth")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Gender")
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("LastName")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("MemberUUID");
+
+                    b.ToTable("Members");
+                });
+
+            modelBuilder.Entity("DbDemoProject.Model.Data.Model.TransactionModel", b =>
+                {
+                    b.Property<Guid>("TransactionUUID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<Guid?>("AppointmentUUID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("MemberUUID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("PaymentMethod")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("ReferenceNumber")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<DateTime>("TransactionDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("TransactionType")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.HasKey("TransactionUUID");
+
+                    b.ToTable("Transactions");
+                });
+
             modelBuilder.Entity("DbDemoProject.Model.NavigationMenu", b =>
                 {
                     b.Property<Guid?>("NavigationMenuUUID")
@@ -114,11 +299,17 @@ namespace DbDemoProject.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
-                    b.Property<Guid>("NavigationMenuUUID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PasswordHash")
                         .IsRequired()
@@ -126,8 +317,7 @@ namespace DbDemoProject.Migrations
 
                     b.Property<string>("PhoneNumber")
                         .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid?>("ProductUUID")
                         .HasColumnType("uniqueidentifier");
@@ -142,13 +332,20 @@ namespace DbDemoProject.Migrations
 
                     b.HasKey("UserUUID");
 
-                    b.HasIndex("NavigationMenuUUID");
-
                     b.HasIndex("ProductUUID");
 
                     b.HasIndex("RoleUUID");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("DbDemoProject.Model.Data.Model.Dashboard", b =>
+                {
+                    b.HasOne("DbDemoProject.Model.UserRoles", "Role")
+                        .WithMany()
+                        .HasForeignKey("RoleUUID");
+
+                    b.Navigation("Role");
                 });
 
             modelBuilder.Entity("DbDemoProject.Model.NavigationMenu", b =>
@@ -162,12 +359,6 @@ namespace DbDemoProject.Migrations
 
             modelBuilder.Entity("DbDemoProject.Model.Users", b =>
                 {
-                    b.HasOne("DbDemoProject.Model.NavigationMenu", "navigationMenu")
-                        .WithMany()
-                        .HasForeignKey("NavigationMenuUUID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("DbDemoProject.Model.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductUUID");
@@ -179,8 +370,6 @@ namespace DbDemoProject.Migrations
                     b.Navigation("Product");
 
                     b.Navigation("Role");
-
-                    b.Navigation("navigationMenu");
                 });
 #pragma warning restore 612, 618
         }

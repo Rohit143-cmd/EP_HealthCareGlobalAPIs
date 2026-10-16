@@ -16,17 +16,27 @@ namespace DbDemoProject.Controllers
     {
         private readonly IAccountService _accountService;
         private readonly INavigationMenuService _navigationMenuService;
-        public AccountController(IAccountService account, INavigationMenuService navigationMenuService)
+        private readonly IDashbordItems _dashbordItems;
+        public AccountController(IAccountService account, INavigationMenuService navigationMenuService, IDashbordItems dashbordItems)
         {
             _accountService = account;
             _navigationMenuService = navigationMenuService;
+            _dashbordItems = dashbordItems;
         }
-        [Authorize(Roles = $"{nameof(UserRoleEnum.SuperAdmin)},{nameof(UserRoleEnum.MasterAdmin)}")]
+        [Authorize]
         [HttpGet("getActiveUsers")]
-        public IActionResult GetActiveUsers()
+        public async Task<IActionResult> GetActiveUsers()
         {
-            var result = _accountService.GetActiveUsers();
-            return Ok(result);
+            try
+            {
+                var result = await _accountService.GetActiveUsers();
+                return Ok(result);
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            
         }
         [Authorize]
         [HttpGet("getDisabledUsers")]
@@ -45,10 +55,10 @@ namespace DbDemoProject.Controllers
             return BadRequest();
         }
         [Authorize]
-        [HttpDelete("getUserById/Userid")]
-        public IActionResult DeleteUser(Guid? Id)
+        [HttpDelete("deleteUser/{userUUID}")]
+        public IActionResult DeleteUser(Guid? userUUID)
         {
-            var result = _accountService.DeleteUser(Id);
+            var result = _accountService.DeleteUser(userUUID);
             if (result == 1)
                 return Ok(new ApiResponseDto
                 {
@@ -90,7 +100,7 @@ namespace DbDemoProject.Controllers
         }
         [HttpPut("updateUser")]
         [Authorize]
-        public IActionResult UpdateUser(Users user)
+        public IActionResult UpdateUser(RegisterUserRequest user)
         {
             var result = _accountService.UpdateUser(user);
             if (result == 1)
@@ -120,11 +130,20 @@ namespace DbDemoProject.Controllers
                 });
             }
         }
+        [Authorize]
         [HttpGet("getProductUserDetails")]
-        public IActionResult GetProductUserDetails([FromQuery] Guid? userUUID)
+        public IActionResult GetProductUserDetails([FromQuery] Guid? roleUUID)
         {
-            var result = _navigationMenuService.GetActiveMenu();
+            var result = _navigationMenuService.GetActiveMenuByRoleID(roleUUID);
 
+            return Ok(result);
+        }
+
+        //[Authorize]
+        [HttpGet("getDashboard")]
+        public async Task<IActionResult> GetDashboardItem([FromQuery] Guid? roleUUID)
+        {
+            var result = await _dashbordItems.GetDashboardItems(roleUUID);
             return Ok(result);
         }
 

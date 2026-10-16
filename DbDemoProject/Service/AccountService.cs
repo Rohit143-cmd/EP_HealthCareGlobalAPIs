@@ -2,7 +2,9 @@
 using DbDemoProject.Data;
 using DbDemoProject.Helper;
 using DbDemoProject.Model;
+using DbDemoProject.Model.ResponseDTO;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using System.IdentityModel.Tokens.Jwt;
 
 namespace DbDemoProject.Service
@@ -35,9 +37,38 @@ namespace DbDemoProject.Service
             return 0;   
         }
 
-        public List<Users> GetActiveUsers()
+        public async Task<List<SystemUserResponseDto>> GetActiveUsers()
         {
-            var result = _dbContextHelper.Users.Where(a=>a.IsActive==true).ToList();
+            var result = await (
+                from user in _dbContextHelper.Users
+
+                join roleData in _dbContextHelper.Roles
+                    on user.RoleUUID equals roleData.RoleUUID into roles
+                from role in roles.DefaultIfEmpty()
+
+                join productData in _dbContextHelper.Product
+                    on user.ProductUUID equals productData.ProductUUID into products
+                from product in products.DefaultIfEmpty()
+
+                where user.IsActive == true
+
+                select new SystemUserResponseDto
+                {
+                    UserUUID = user.UserUUID,
+                    UserName = user.UserName,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+
+                    RoleUUID = role != null ? role.RoleUUID : null,
+                    Rolename = role != null ? role.RoleName : null,
+
+                    ProductUUID = product != null ? product.ProductUUID : null,
+                    ProductName = product != null ? product.ProductName : null,
+
+                    IsActive = user.IsActive
+                }
+            ).ToListAsync();
+
             return result;
         }
 
@@ -118,7 +149,13 @@ namespace DbDemoProject.Service
                 user.EmailID = usersIncoming.Email;
                 user.UserName = usersIncoming.UserName;
                 user.PhoneNumber = usersIncoming.Phonenumeber;
+                user.FirstName = usersIncoming.Firstname;
+                user.LastName = usersIncoming.Lastname;
+                user.RoleUUID = usersIncoming.RoleUUID;
+                user.ProductUUID = Guid.Parse("09934910-A531-440A-AF69-67D683621263");
                 // Hash password
+                //Termproray Password
+                usersIncoming.Password = "12345";
                 user.PasswordHash = _passwordHasher.HashPassword(
                     user,
                     usersIncoming.Password
@@ -130,12 +167,20 @@ namespace DbDemoProject.Service
             return 0;
         }
 
-        public int UpdateUser(Users user)
+        public int UpdateUser(RegisterUserRequest user)
         {
             if(user!=null && user.UserUUID != null)
             {
-                _dbContextHelper.Users.Update(user);
-                return _dbContextHelper.SaveChanges();
+                var result = _dbContextHelper.Users.Where(a=>a.UserUUID==user.UserUUID).FirstOrDefault();
+                if(result!=null)
+                {
+                    result.FirstName = user.Firstname;
+                    result.LastName = user.Lastname;
+                    result.UserName = user.UserName;
+                    result.RoleUUID = user.RoleUUID;
+                    _dbContextHelper.Users.Update(result);
+                    return _dbContextHelper.SaveChanges();
+                }
             }
             return 0;
         }

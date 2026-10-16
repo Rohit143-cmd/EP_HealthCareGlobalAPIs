@@ -31,5 +31,27 @@ namespace DbDemoProject.Service.Account
 
             return response;
         }
+
+        public List<NavigationResponseModel> GetActiveMenuByRoleID(Guid? roleUUID)
+        {
+            var result = _navigationMenuRepository
+                .GetActiveMenu().Where(a=>a.RoleUUID==roleUUID)
+                .ToList();
+
+            var parentMenus = result
+                .Where(m => m.IsParent == true)
+                .ToList();
+
+            var response = parentMenus.Select(parent => new NavigationResponseModel
+            {
+                NavigationMenu = parent,
+
+                NavigationMenuChildModel = result
+                    .Where(child => child.ParentUUID == parent.NavigationMenuUUID)
+                    .ToList()
+            }).ToList();
+
+            return response;
+        }
     }
 }
