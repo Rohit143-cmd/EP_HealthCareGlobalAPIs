@@ -6,6 +6,7 @@ namespace DbDemoProject.Service
     public interface IAccountService
     {
         public Task<List<SystemUserResponseDto>> GetActiveUsers();
+        public Task<List<SystemUserResponseDto>> GetUserByRole(string rolename);
         public List<Users> GetDisabledUsers();
         public Users? GetUserByID(Guid? userid);
         public int DeleteUser(Guid? userid);

@@ -85,6 +85,22 @@
   },
   {
     "ContainingType": "DbDemoProject.Controllers.AccountController",
+    "Method": "GetUserByRole",
+    "RelativePath": "api/Account/getUserByRole",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rolename",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbDemoProject.Controllers.AccountController",
     "Method": "Login",
     "RelativePath": "api/Account/login",
     "HttpMethod": "POST",
@@ -126,6 +142,80 @@
       {
         "Name": "user",
         "Type": "DbDemoProject.Model.RegisterUserRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbDemoProject.Controllers.MemberController",
+    "Method": "AddMember",
+    "RelativePath": "api/Member/addMember",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "memberModel",
+        "Type": "DbDemoProject.Model.Data.Model.MemberModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbDemoProject.Controllers.MemberController",
+    "Method": "DeleteMember",
+    "RelativePath": "api/Member/deleteMemberById/{memberUUID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "memberUUID",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbDemoProject.Controllers.MemberController",
+    "Method": "GetMemberById",
+    "RelativePath": "api/Member/getMemberById/{memberUUID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "memberUUID",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbDemoProject.Controllers.MemberController",
+    "Method": "GetMembers",
+    "RelativePath": "api/Member/getMembers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbDemoProject.Controllers.MemberController",
+    "Method": "UpdateMember",
+    "RelativePath": "api/Member/updateMember",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "memberModel",
+        "Type": "DbDemoProject.Model.Data.Model.MemberModel",
         "IsRequired": true
       }
     ],

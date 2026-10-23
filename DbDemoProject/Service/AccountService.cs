@@ -87,6 +87,24 @@ namespace DbDemoProject.Service
             return null;
         }
 
+        public async Task<List<SystemUserResponseDto>> GetUserByRole(string rolename)
+        {
+            var result = await (
+                from user in _dbContextHelper.Users
+                join role in _dbContextHelper.Roles
+                    on user.RoleUUID equals role.RoleUUID
+                where role.RoleName.ToLower() == rolename.ToLower()
+                select new SystemUserResponseDto
+                {
+                    UserUUID = user.UserUUID,
+                    UserName = user.UserName,
+                    RoleUUID = role.RoleUUID,
+                    Rolename = role.RoleName
+                }
+            ).ToListAsync();
+            return result;
+        }
+
         public LoginResponseDto? Login(LoginRequest loginRequest)
         {
             string token = null;

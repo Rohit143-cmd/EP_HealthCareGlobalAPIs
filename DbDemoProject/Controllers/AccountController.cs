@@ -138,12 +138,18 @@ namespace DbDemoProject.Controllers
 
             return Ok(result);
         }
-
-        //[Authorize]
+        [Authorize]
         [HttpGet("getDashboard")]
         public async Task<IActionResult> GetDashboardItem([FromQuery] Guid? roleUUID)
         {
             var result = await _dashbordItems.GetDashboardItems(roleUUID);
+            return Ok(result);
+        }
+        [Authorize]
+        [HttpGet("getUserByRole")]
+        public async Task<IActionResult> GetUserByRole([FromQuery] string rolename)
+        {
+            var result = await _accountService.GetUserByRole(rolename);
             return Ok(result);
         }
 

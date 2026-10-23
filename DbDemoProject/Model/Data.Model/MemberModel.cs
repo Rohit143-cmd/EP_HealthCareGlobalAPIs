@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿
+using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DbDemoProject.Model.Data.Model
@@ -7,7 +9,16 @@ namespace DbDemoProject.Model.Data.Model
     public class MemberModel
     {
         [Key]
-        public Guid? MemberUUID { get; set; }
+        public Guid MemberUUID { get; set; } = Guid.NewGuid();
+
+        // SQL Server automatically generates 1, 2, 3, ...
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int MemberNumber { get; private set; }
+
+        // SQL Server generates MBR000001, MBR000002, ...
+        [StringLength(23)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public string MemberID { get; set; } = string.Empty;
 
         [Required]
         [StringLength(100)]
@@ -17,6 +28,7 @@ namespace DbDemoProject.Model.Data.Model
         public string? LastName { get; set; }
 
         [Required]
+        [EmailAddress]
         [StringLength(150)]
         public string Email { get; set; } = string.Empty;
 

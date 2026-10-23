@@ -113,7 +113,7 @@ namespace DbDemoProject.Migrations
 
             modelBuilder.Entity("DbDemoProject.Model.Data.Model.MemberModel", b =>
                 {
-                    b.Property<Guid?>("MemberUUID")
+                    b.Property<Guid>("MemberUUID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
@@ -147,6 +147,17 @@ namespace DbDemoProject.Migrations
                     b.Property<string>("LastName")
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("MemberID")
+                        .IsRequired()
+                        .HasMaxLength(23)
+                        .HasColumnType("nvarchar(23)");
+
+                    b.Property<int>("MemberNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MemberNumber"));
 
                     b.Property<string>("PhoneNumber")
                         .HasMaxLength(20)
