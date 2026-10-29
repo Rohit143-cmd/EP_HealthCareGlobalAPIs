@@ -19,5 +19,6 @@ namespace DbDemoProject.Data
         public DbSet<MemberModel> Member { get; set; }
         public DbSet<AppointmentModel> Appointment { get; set; }
         public DbSet<TransactionModel> Transaction { get; set; }
+        public DbSet<LetterModel> Letter { get; set; }
     }
 }

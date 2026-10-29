@@ -148,6 +148,100 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "DbDemoProject.Controllers.AppointmentController",
+    "Method": "BookAppointment",
+    "RelativePath": "api/Appointment/bookAppointment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "appointmentRequest",
+        "Type": "DbDemoProject.Model.ResponseDTO.AppointmentRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbDemoProject.Controllers.AppointmentController",
+    "Method": "GetAppointment",
+    "RelativePath": "api/Appointment/getAppointment",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbDemoProject.Controllers.AppointmentController",
+    "Method": "GetAppointmentByUser",
+    "RelativePath": "api/Appointment/getAppointmentByUser/{userUUID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userUUID",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbDemoProject.Controllers.LetterController",
+    "Method": "SaveLetter",
+    "RelativePath": "api/Letter/addLetter",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "DocumentName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DocumentType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FileByte",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbDemoProject.Controllers.LetterController",
+    "Method": "GenerateAppointmentLetter",
+    "RelativePath": "api/Letter/generateAppointmentLetter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "appointmentUUID",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbDemoProject.Controllers.LetterController",
+    "Method": "GetLetter",
+    "RelativePath": "api/Letter/getLetter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "DbDemoProject.Controllers.MemberController",
     "Method": "AddMember",
     "RelativePath": "api/Member/addMember",

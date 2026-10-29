@@ -3,24 +3,88 @@
   "WorkspaceRootPath": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\service\\appointment\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\service\\appointment\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\service\\appointment\\iappointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\service\\appointment\\iappointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\model\\responsedto\\appointmentrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\model\\responsedto\\appointmentrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Migrations\\20261028071403_updatedappointmentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DbDemoProject\\Migrations\\20261028071403_updatedappointmentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\model\\data.model\\appointmentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\model\\data.model\\appointmentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\service\\admin\\letterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\service\\admin\\letterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\controllers\\lettercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\controllers\\lettercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\service\\admin\\iletterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\service\\admin\\iletterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\model\\data.model\\lettermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\model\\data.model\\lettermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\model\\responsedto\\letterrequestresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\model\\responsedto\\letterrequestresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Migrations\\20261026105045_addedlatter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DbDemoProject\\Migrations\\20261026105045_addedlatter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\data\\dbcontexthelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\data\\dbcontexthelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\service\\account\\dashboarditemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\service\\account\\dashboarditemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\service\\appointment\\memberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\service\\appointment\\memberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\service\\appointment\\imemberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\service\\appointment\\imemberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\model\\data.model\\membermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\model\\data.model\\membermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\service\\appointment\\imemberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\service\\appointment\\imemberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\repository\\account\\rolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,10 +97,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\model\\responsedto\\memberresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\model\\responsedto\\memberresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\service\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -59,10 +119,6 @@
       "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\model\\data.model\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\data\\dbcontexthelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\data\\dbcontexthelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\migrations\\20261016105612_addedbuttonlable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\migrations\\20261016105612_addedbuttonlable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -71,16 +127,8 @@
       "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\migrations\\20261016104142_addappointmentandtransactiontables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\service\\account\\dashboarditemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\service\\account\\dashboarditemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\model\\responsedto\\dashboarditemresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\model\\responsedto\\dashboarditemresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\model\\data.model\\appointmentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\model\\data.model\\appointmentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\model\\data.model\\transactionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -149,6 +197,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\migrations\\20261023084446_updatedmemberid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\migrations\\20261023084446_updatedmemberid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|c:\\users\\lt-491\\desktop\\ep_healthcareglobalapis\\dbdemoproject\\migrations\\20261026111033_addedlatterupdated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B72C1EF9-7F10-8744-2012-15AAECAF202F}|DbDemoProject\\DbDemoProject.csproj|solutionrelative:dbdemoproject\\migrations\\20261026111033_addedlatterupdated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -158,11 +210,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 25,
               "Title": "Users.cs",
               "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Model\\Users.cs",
               "RelativeDocumentMoniker": "DbDemoProject\\Model\\Users.cs",
@@ -176,19 +228,256 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MemberService.cs",
-              "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Service\\Appointment\\MemberService.cs",
-              "RelativeDocumentMoniker": "DbDemoProject\\Service\\Appointment\\MemberService.cs",
-              "ToolTip": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Service\\Appointment\\MemberService.cs",
-              "RelativeToolTip": "DbDemoProject\\Service\\Appointment\\MemberService.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBoAAAAIAAAAAAAAAA==",
+              "Title": "AppointmentService.cs",
+              "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Service\\Appointment\\AppointmentService.cs",
+              "RelativeDocumentMoniker": "DbDemoProject\\Service\\Appointment\\AppointmentService.cs",
+              "ToolTip": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Service\\Appointment\\AppointmentService.cs",
+              "RelativeToolTip": "DbDemoProject\\Service\\Appointment\\AppointmentService.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAYwGIAAABnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-23T09:09:54.734Z",
+              "WhenOpened": "2026-10-26T07:03:56.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppointmentRequestModel.cs",
+              "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Model\\ResponseDTO\\AppointmentRequestModel.cs",
+              "RelativeDocumentMoniker": "DbDemoProject\\Model\\ResponseDTO\\AppointmentRequestModel.cs",
+              "ToolTip": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Model\\ResponseDTO\\AppointmentRequestModel.cs",
+              "RelativeToolTip": "DbDemoProject\\Model\\ResponseDTO\\AppointmentRequestModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T06:49:54.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppointmentController.cs",
+              "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Controllers\\AppointmentController.cs",
+              "RelativeDocumentMoniker": "DbDemoProject\\Controllers\\AppointmentController.cs",
+              "ToolTip": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Controllers\\AppointmentController.cs",
+              "RelativeToolTip": "DbDemoProject\\Controllers\\AppointmentController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAmwBUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T06:47:20.779Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "IAppointmentService.cs",
+              "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Service\\Appointment\\IAppointmentService.cs",
+              "RelativeDocumentMoniker": "DbDemoProject\\Service\\Appointment\\IAppointmentService.cs",
+              "ToolTip": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Service\\Appointment\\IAppointmentService.cs",
+              "RelativeToolTip": "DbDemoProject\\Service\\Appointment\\IAppointmentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T07:03:43.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LetterService.cs",
+              "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Service\\Admin\\LetterService.cs",
+              "RelativeDocumentMoniker": "DbDemoProject\\Service\\Admin\\LetterService.cs",
+              "ToolTip": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Service\\Admin\\LetterService.cs",
+              "RelativeToolTip": "DbDemoProject\\Service\\Admin\\LetterService.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAYwHIAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T10:51:53.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20261028071403_updatedappointmentmodel.cs",
+              "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Migrations\\20261028071403_updatedappointmentmodel.cs",
+              "RelativeDocumentMoniker": "DbDemoProject\\Migrations\\20261028071403_updatedappointmentmodel.cs",
+              "ToolTip": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Migrations\\20261028071403_updatedappointmentmodel.cs",
+              "RelativeToolTip": "DbDemoProject\\Migrations\\20261028071403_updatedappointmentmodel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-28T07:14:03.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Program.cs",
+              "RelativeDocumentMoniker": "DbDemoProject\\Program.cs",
+              "ToolTip": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Program.cs",
+              "RelativeToolTip": "DbDemoProject\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAI4AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T13:04:44.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ILetterService.cs",
+              "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Service\\Admin\\ILetterService.cs",
+              "RelativeDocumentMoniker": "DbDemoProject\\Service\\Admin\\ILetterService.cs",
+              "ToolTip": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Service\\Admin\\ILetterService.cs",
+              "RelativeToolTip": "DbDemoProject\\Service\\Admin\\ILetterService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T10:51:44.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LetterController.cs",
+              "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Controllers\\LetterController.cs",
+              "RelativeDocumentMoniker": "DbDemoProject\\Controllers\\LetterController.cs",
+              "ToolTip": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Controllers\\LetterController.cs",
+              "RelativeToolTip": "DbDemoProject\\Controllers\\LetterController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T10:47:29.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AppointmentModel.cs",
+              "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Model\\Data.Model\\AppointmentModel.cs",
+              "RelativeDocumentMoniker": "DbDemoProject\\Model\\Data.Model\\AppointmentModel.cs",
+              "ToolTip": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Model\\Data.Model\\AppointmentModel.cs",
+              "RelativeToolTip": "DbDemoProject\\Model\\Data.Model\\AppointmentModel.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T10:38:09.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\appsettings.json",
+              "RelativeDocumentMoniker": "DbDemoProject\\appsettings.json",
+              "ToolTip": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\appsettings.json",
+              "RelativeToolTip": "DbDemoProject\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-27T08:20:01.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "20261026111033_addedlatterupdated.cs",
+              "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Migrations\\20261026111033_addedlatterupdated.cs",
+              "RelativeDocumentMoniker": "DbDemoProject\\Migrations\\20261026111033_addedlatterupdated.cs",
+              "ToolTip": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Migrations\\20261026111033_addedlatterupdated.cs",
+              "RelativeToolTip": "DbDemoProject\\Migrations\\20261026111033_addedlatterupdated.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T11:10:34.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LetterRequestResponse.cs",
+              "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Model\\ResponseDTO\\LetterRequestResponse.cs",
+              "RelativeDocumentMoniker": "DbDemoProject\\Model\\ResponseDTO\\LetterRequestResponse.cs",
+              "ToolTip": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Model\\ResponseDTO\\LetterRequestResponse.cs",
+              "RelativeToolTip": "DbDemoProject\\Model\\ResponseDTO\\LetterRequestResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T11:11:06.353Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LetterModel.cs",
+              "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Model\\Data.Model\\LetterModel.cs",
+              "RelativeDocumentMoniker": "DbDemoProject\\Model\\Data.Model\\LetterModel.cs",
+              "ToolTip": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Model\\Data.Model\\LetterModel.cs",
+              "RelativeToolTip": "DbDemoProject\\Model\\Data.Model\\LetterModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T10:47:48.897Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "DbDemoProject\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "DbDemoProject\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAmwJUAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T11:11:12.293Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "20261026105045_addedlatter.cs",
+              "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Migrations\\20261026105045_addedlatter.cs",
+              "RelativeDocumentMoniker": "DbDemoProject\\Migrations\\20261026105045_addedlatter.cs",
+              "ToolTip": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Migrations\\20261026105045_addedlatter.cs",
+              "RelativeToolTip": "DbDemoProject\\Migrations\\20261026105045_addedlatter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T10:50:45.605Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DbContextHelper.cs",
+              "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Data\\DbContextHelper.cs",
+              "RelativeDocumentMoniker": "DbDemoProject\\Data\\DbContextHelper.cs",
+              "ToolTip": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Data\\DbContextHelper.cs",
+              "RelativeToolTip": "DbDemoProject\\Data\\DbContextHelper.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T05:58:07.889Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DashboardItemService.cs",
+              "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Service\\Account\\DashboardItemService.cs",
+              "RelativeDocumentMoniker": "DbDemoProject\\Service\\Account\\DashboardItemService.cs",
+              "ToolTip": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Service\\Account\\DashboardItemService.cs",
+              "RelativeToolTip": "DbDemoProject\\Service\\Account\\DashboardItemService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T08:44:35.177Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MemberService.cs",
+              "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Service\\Appointment\\MemberService.cs",
+              "RelativeDocumentMoniker": "DbDemoProject\\Service\\Appointment\\MemberService.cs",
+              "ToolTip": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Service\\Appointment\\MemberService.cs",
+              "RelativeToolTip": "DbDemoProject\\Service\\Appointment\\MemberService.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAuwEQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-23T09:09:54.734Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "MemberModel.cs",
+              "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Model\\Data.Model\\MemberModel.cs",
+              "RelativeDocumentMoniker": "DbDemoProject\\Model\\Data.Model\\MemberModel.cs",
+              "ToolTip": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Model\\Data.Model\\MemberModel.cs",
+              "RelativeToolTip": "DbDemoProject\\Model\\Data.Model\\MemberModel.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAjwCYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T10:34:33.363Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "IMemberService.cs",
               "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Service\\Appointment\\IMemberService.cs",
               "RelativeDocumentMoniker": "DbDemoProject\\Service\\Appointment\\IMemberService.cs",
@@ -196,49 +485,23 @@
               "RelativeToolTip": "DbDemoProject\\Service\\Appointment\\IMemberService.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAlwAkAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-23T09:09:33.031Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-23T09:09:33.031Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Program.cs",
-              "RelativeDocumentMoniker": "DbDemoProject\\Program.cs",
-              "ToolTip": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Program.cs",
-              "RelativeToolTip": "DbDemoProject\\Program.cs",
-              "ViewState": "AgIAAOAAAAAAAAAAAAAUwPkAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-13T13:04:44.259Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 19,
               "Title": "MemberController.cs",
               "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Controllers\\MemberController.cs",
               "RelativeDocumentMoniker": "DbDemoProject\\Controllers\\MemberController.cs",
               "ToolTip": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Controllers\\MemberController.cs",
               "RelativeToolTip": "DbDemoProject\\Controllers\\MemberController.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAAwDEAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAIwBkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-23T09:07:57.519Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-23T09:07:57.519Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MemberModel.cs",
-              "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Model\\Data.Model\\MemberModel.cs",
-              "RelativeDocumentMoniker": "DbDemoProject\\Model\\Data.Model\\MemberModel.cs",
-              "ToolTip": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Model\\Data.Model\\MemberModel.cs",
-              "RelativeToolTip": "DbDemoProject\\Model\\Data.Model\\MemberModel.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAmwBMAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-16T10:34:33.363Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 21,
               "Title": "RoleRepository.cs",
               "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Repository\\Account\\RoleRepository.cs",
               "RelativeDocumentMoniker": "DbDemoProject\\Repository\\Account\\RoleRepository.cs",
@@ -250,7 +513,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 22,
               "Title": "RoleController.cs",
               "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Controllers\\RoleController.cs",
               "RelativeDocumentMoniker": "DbDemoProject\\Controllers\\RoleController.cs",
@@ -262,7 +525,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 23,
               "Title": "MemberResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Model\\ResponseDTO\\MemberResponseDto.cs",
               "RelativeDocumentMoniker": "DbDemoProject\\Model\\ResponseDTO\\MemberResponseDto.cs",
@@ -274,7 +537,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 48,
               "Title": "20261023084446_updatedmemberid.cs",
               "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Migrations\\20261023084446_updatedmemberid.cs",
               "RelativeDocumentMoniker": "DbDemoProject\\Migrations\\20261023084446_updatedmemberid.cs",
@@ -286,31 +549,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "DbContextHelper.cs",
-              "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Data\\DbContextHelper.cs",
-              "RelativeDocumentMoniker": "DbDemoProject\\Data\\DbContextHelper.cs",
-              "ToolTip": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Data\\DbContextHelper.cs",
-              "RelativeToolTip": "DbDemoProject\\Data\\DbContextHelper.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T05:58:07.889Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "DbDemoProject\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "DbDemoProject\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAIsAAAAAAAAAAAAUwI0AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-13T11:11:12.293Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 24,
               "Title": "AccountService.cs",
               "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Service\\AccountService.cs",
               "RelativeDocumentMoniker": "DbDemoProject\\Service\\AccountService.cs",
@@ -322,7 +561,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 26,
               "Title": "IAccountService.cs",
               "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Service\\IAccountService.cs",
               "RelativeDocumentMoniker": "DbDemoProject\\Service\\IAccountService.cs",
@@ -334,7 +573,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 27,
               "Title": "IDashbordItems.cs",
               "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Service\\Account\\IDashbordItems.cs",
               "RelativeDocumentMoniker": "DbDemoProject\\Service\\Account\\IDashbordItems.cs",
@@ -346,7 +585,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 28,
               "Title": "Dashboard.cs",
               "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Model\\Data.Model\\Dashboard.cs",
               "RelativeDocumentMoniker": "DbDemoProject\\Model\\Data.Model\\Dashboard.cs",
@@ -358,7 +597,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 30,
               "Title": "20261016104142_AddAppointmentAndTransactionTables.cs",
               "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Migrations\\20261016104142_AddAppointmentAndTransactionTables.cs",
               "RelativeDocumentMoniker": "DbDemoProject\\Migrations\\20261016104142_AddAppointmentAndTransactionTables.cs",
@@ -370,7 +609,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 29,
               "Title": "20261016105612_addedbuttonlable.cs",
               "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Migrations\\20261016105612_addedbuttonlable.cs",
               "RelativeDocumentMoniker": "DbDemoProject\\Migrations\\20261016105612_addedbuttonlable.cs",
@@ -382,19 +621,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "DashboardItemService.cs",
-              "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Service\\Account\\DashboardItemService.cs",
-              "RelativeDocumentMoniker": "DbDemoProject\\Service\\Account\\DashboardItemService.cs",
-              "ToolTip": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Service\\Account\\DashboardItemService.cs",
-              "RelativeToolTip": "DbDemoProject\\Service\\Account\\DashboardItemService.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAYwGMAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-16T08:44:35.177Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 31,
               "Title": "DashboardItemResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Model\\ResponseDTO\\DashboardItemResponseDto.cs",
               "RelativeDocumentMoniker": "DbDemoProject\\Model\\ResponseDTO\\DashboardItemResponseDto.cs",
@@ -406,19 +633,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "AppointmentModel.cs",
-              "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Model\\Data.Model\\AppointmentModel.cs",
-              "RelativeDocumentMoniker": "DbDemoProject\\Model\\Data.Model\\AppointmentModel.cs",
-              "ToolTip": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Model\\Data.Model\\AppointmentModel.cs",
-              "RelativeToolTip": "DbDemoProject\\Model\\Data.Model\\AppointmentModel.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA5wBwAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-16T10:38:09.155Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 32,
               "Title": "TransactionModel.cs",
               "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Model\\Data.Model\\TransactionModel.cs",
               "RelativeDocumentMoniker": "DbDemoProject\\Model\\Data.Model\\TransactionModel.cs",
@@ -430,7 +645,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 46,
               "Title": "20261016095413_addeddtitle.cs",
               "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Migrations\\20261016095413_addeddtitle.cs",
               "RelativeDocumentMoniker": "DbDemoProject\\Migrations\\20261016095413_addeddtitle.cs",
@@ -442,7 +657,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 33,
               "Title": "20261016085456_addeddashboardupdated.cs",
               "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Migrations\\20261016085456_addeddashboardupdated.cs",
               "RelativeDocumentMoniker": "DbDemoProject\\Migrations\\20261016085456_addeddashboardupdated.cs",
@@ -454,7 +669,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 47,
               "Title": "20261016090143_addeddashboard.cs",
               "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Migrations\\20261016090143_addeddashboard.cs",
               "RelativeDocumentMoniker": "DbDemoProject\\Migrations\\20261016090143_addeddashboard.cs",
@@ -466,7 +681,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 35,
               "Title": "JWTHelper.cs",
               "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Helper\\JWTHelper.cs",
               "RelativeDocumentMoniker": "DbDemoProject\\Helper\\JWTHelper.cs",
@@ -478,7 +693,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 37,
               "Title": "SystemUserResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Model\\ResponseDTO\\SystemUserResponseDto.cs",
               "RelativeDocumentMoniker": "DbDemoProject\\Model\\ResponseDTO\\SystemUserResponseDto.cs",
@@ -490,7 +705,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 34,
               "Title": "RegisterUserRequest.cs",
               "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Model\\RegisterUserRequest.cs",
               "RelativeDocumentMoniker": "DbDemoProject\\Model\\RegisterUserRequest.cs",
@@ -502,7 +717,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 41,
               "Title": "NagivationResponseModel.cs",
               "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Model\\NagivationResponseModel.cs",
               "RelativeDocumentMoniker": "DbDemoProject\\Model\\NagivationResponseModel.cs",
@@ -514,7 +729,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 36,
               "Title": "UserRoles.cs",
               "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Model\\UserRoles.cs",
               "RelativeDocumentMoniker": "DbDemoProject\\Model\\UserRoles.cs",
@@ -526,7 +741,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 40,
               "Title": "INavigationMenuService.cs",
               "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Service\\Account\\INavigationMenuService.cs",
               "RelativeDocumentMoniker": "DbDemoProject\\Service\\Account\\INavigationMenuService.cs",
@@ -538,7 +753,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 39,
               "Title": "NavigationMenuService.cs",
               "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Service\\Account\\NavigationMenuService.cs",
               "RelativeDocumentMoniker": "DbDemoProject\\Service\\Account\\NavigationMenuService.cs",
@@ -550,7 +765,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 38,
               "Title": "UserRoleEnum.cs",
               "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Helper\\UserRoleEnum.cs",
               "RelativeDocumentMoniker": "DbDemoProject\\Helper\\UserRoleEnum.cs",
@@ -562,7 +777,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 42,
               "Title": "INavigationMenuRepository.cs",
               "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Repository\\Account\\INavigationMenuRepository.cs",
               "RelativeDocumentMoniker": "DbDemoProject\\Repository\\Account\\INavigationMenuRepository.cs",
@@ -574,7 +789,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 43,
               "Title": "NavigationMenu.cs",
               "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Model\\NavigationMenu.cs",
               "RelativeDocumentMoniker": "DbDemoProject\\Model\\NavigationMenu.cs",
@@ -586,7 +801,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 44,
               "Title": "NavigationMenuRepository.cs",
               "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Repository\\Account\\NavigationMenuRepository.cs",
               "RelativeDocumentMoniker": "DbDemoProject\\Repository\\Account\\NavigationMenuRepository.cs",
@@ -598,7 +813,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 45,
               "Title": "ApiResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\LT-491\\Desktop\\EP_HealthCareGlobalAPIs\\DbDemoProject\\Model\\ApiResponseDto.cs",
               "RelativeDocumentMoniker": "DbDemoProject\\Model\\ApiResponseDto.cs",

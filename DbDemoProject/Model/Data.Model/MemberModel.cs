@@ -36,6 +36,7 @@ namespace DbDemoProject.Model.Data.Model
         public string? PhoneNumber { get; set; }
 
         public DateTime? DateOfBirth { get; set; }
+        //public DateTime? AppointmentDate { get; set; }
 
         [StringLength(20)]
         public string? Gender { get; set; }

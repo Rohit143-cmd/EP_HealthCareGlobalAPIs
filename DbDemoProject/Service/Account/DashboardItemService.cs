@@ -36,7 +36,8 @@ namespace DbDemoProject.Service.Account
                     StringComparer.OrdinalIgnoreCase)
             {
                 "Users",
-                "Product"
+                "Product",
+                "Appointments"
             };
 
                 foreach (var item in items)

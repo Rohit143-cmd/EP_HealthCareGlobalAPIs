@@ -6811,3 +6811,884 @@ WHERE [d].[RoleUUID] = @__roleUUID_Value_0
 2026-10-23 18:39:18.347 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject) in 33.5361ms
 2026-10-23 18:39:18.352 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject)'
 2026-10-23 18:39:18.355 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 77.0717ms
+2026-10-23 18:44:08.121 +05:30 [INF] User profile is available. Using 'C:\Users\LT-491\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-23 18:44:08.562 +05:30 [INF] Now listening on: https://localhost:7071
+2026-10-23 18:44:08.569 +05:30 [INF] Now listening on: http://localhost:5075
+2026-10-23 18:44:08.760 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-23 18:44:08.763 +05:30 [INF] Hosting environment: Development
+2026-10-23 18:44:08.768 +05:30 [INF] Content root path: C:\Users\LT-491\Desktop\EP_HealthCareGlobalAPIs\DbDemoProject
+2026-10-23 18:44:10.638 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/index.html - null null
+2026-10-23 18:44:11.712 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/index.html - 200 null text/html;charset=utf-8 1112.9665ms
+2026-10-23 18:44:11.746 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/_vs/browserLink - null null
+2026-10-23 18:44:11.746 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-23 18:44:11.845 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - 200 14931 application/javascript; charset=utf-8 98.5374ms
+2026-10-23 18:44:12.057 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/_vs/browserLink - 200 null text/javascript; charset=UTF-8 311.8107ms
+2026-10-23 18:44:12.162 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - null null
+2026-10-23 18:44:12.214 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 52.6034ms
+2026-10-23 18:44:25.801 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:44:25.833 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:44:25.842 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 204 null null 40.8904ms
+2026-10-23 18:44:25.846 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:44:25.870 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:44:26.263 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:44:26.371 +05:30 [INF] Route matched with {action = "GetProductUserDetails", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProductUserDetails(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:44:31.577 +05:30 [INF] Executed DbCommand (128ms) [Parameters=[@__roleUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[NavigationMenuUUID], [n].[DisplayName], [n].[IsActive], [n].[IsParent], [n].[Order], [n].[ParentUUID], [n].[RoleUUID], [n].[URL]
+FROM [NavigationMenu] AS [n]
+WHERE [n].[IsActive] = CAST(1 AS bit) AND [n].[RoleUUID] = @__roleUUID_0
+2026-10-23 18:44:31.919 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.NavigationResponseModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:44:32.020 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:44:32.026 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject) in 5633.0293ms
+2026-10-23 18:44:32.034 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:44:32.037 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:44:32.050 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:44:32.059 +05:30 [INF] Route matched with {action = "GetProductUserDetails", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProductUserDetails(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:44:32.065 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 6219.4587ms
+2026-10-23 18:44:32.081 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:44:32.090 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:44:32.093 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 204 null null 13.523ms
+2026-10-23 18:44:32.098 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:44:32.115 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:44:32.128 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject)'
+2026-10-23 18:44:32.149 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@__roleUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[NavigationMenuUUID], [n].[DisplayName], [n].[IsActive], [n].[IsParent], [n].[Order], [n].[ParentUUID], [n].[RoleUUID], [n].[URL]
+FROM [NavigationMenu] AS [n]
+WHERE [n].[IsActive] = CAST(1 AS bit) AND [n].[RoleUUID] = @__roleUUID_0
+2026-10-23 18:44:32.155 +05:30 [INF] Route matched with {action = "GetDashboardItem", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetDashboardItem(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:44:32.159 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.NavigationResponseModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:44:32.170 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject) in 104.5368ms
+2026-10-23 18:44:32.176 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:44:32.182 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 162.6377ms
+2026-10-23 18:44:32.555 +05:30 [INF] Executed DbCommand (50ms) [Parameters=[@__roleUUID_Value_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DashbordUUID], [d].[RoleUUID], [d].[buttonLabel], [d].[gradient], [d].[icon], [d].[id], [d].[nameofTableCount], [d].[shadowColor], [d].[title], [d].[value], [d].[viewAllURL]
+FROM [DashboardItems] AS [d]
+WHERE [d].[RoleUUID] = @__roleUUID_Value_0
+2026-10-23 18:44:32.631 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.ResponseDTO.DashboardItemResponseDto, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:44:32.649 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject) in 486.2067ms
+2026-10-23 18:44:32.667 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject)'
+2026-10-23 18:44:32.690 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 593.2668ms
+2026-10-23 18:44:34.365 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Member/getMembers - null null
+2026-10-23 18:44:34.376 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:44:34.381 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Member/getMembers - 204 null null 17.6448ms
+2026-10-23 18:44:34.386 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Member/getMembers - application/json null
+2026-10-23 18:44:34.411 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:44:34.416 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject)'
+2026-10-23 18:44:34.438 +05:30 [INF] Route matched with {action = "GetMembers", controller = "Member"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMembers() on controller DbDemoProject.Controllers.MemberController (DbDemoProject).
+2026-10-23 18:44:34.502 +05:30 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MemberUUID], [m].[Address], [m].[CreatedDate], [m].[DateOfBirth], [m].[Email], [m].[FirstName], [m].[Gender], [m].[IsActive], [m].[LastName], [m].[MemberID], [m].[MemberNumber], [m].[PhoneNumber], [m].[UpdatedDate]
+FROM [Members] AS [m]
+WHERE [m].[IsActive] = CAST(1 AS bit)
+2026-10-23 18:44:34.627 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.Data.Model.MemberModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:44:34.676 +05:30 [INF] Executed action DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject) in 227.4308ms
+2026-10-23 18:44:34.681 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject)'
+2026-10-23 18:44:34.687 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Member/getMembers - 200 null application/json; charset=utf-8 302.0703ms
+2026-10-23 18:46:37.758 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:46:37.891 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:46:37.907 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 204 null null 150.5631ms
+2026-10-23 18:46:37.920 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:46:38.002 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:46:38.006 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:46:38.071 +05:30 [INF] Route matched with {action = "GetProductUserDetails", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProductUserDetails(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:46:38.122 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[@__roleUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[NavigationMenuUUID], [n].[DisplayName], [n].[IsActive], [n].[IsParent], [n].[Order], [n].[ParentUUID], [n].[RoleUUID], [n].[URL]
+FROM [NavigationMenu] AS [n]
+WHERE [n].[IsActive] = CAST(1 AS bit) AND [n].[RoleUUID] = @__roleUUID_0
+2026-10-23 18:46:38.144 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.NavigationResponseModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:46:38.188 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject) in 97.3227ms
+2026-10-23 18:46:38.207 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:46:38.216 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 296.4889ms
+2026-10-23 18:46:38.520 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:46:38.526 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:46:38.535 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:46:38.542 +05:30 [INF] Route matched with {action = "GetProductUserDetails", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProductUserDetails(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:46:38.570 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[@__roleUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[NavigationMenuUUID], [n].[DisplayName], [n].[IsActive], [n].[IsParent], [n].[Order], [n].[ParentUUID], [n].[RoleUUID], [n].[URL]
+FROM [NavigationMenu] AS [n]
+WHERE [n].[IsActive] = CAST(1 AS bit) AND [n].[RoleUUID] = @__roleUUID_0
+2026-10-23 18:46:38.573 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.NavigationResponseModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:46:38.576 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject) in 32.124ms
+2026-10-23 18:46:38.587 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:46:38.589 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 70.7473ms
+2026-10-23 18:46:47.110 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Member/getMembers - null null
+2026-10-23 18:46:47.141 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:46:47.150 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Member/getMembers - 204 null null 39.7804ms
+2026-10-23 18:46:47.158 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Member/getMembers - application/json null
+2026-10-23 18:46:47.194 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:46:47.199 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject)'
+2026-10-23 18:46:47.204 +05:30 [INF] Route matched with {action = "GetMembers", controller = "Member"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMembers() on controller DbDemoProject.Controllers.MemberController (DbDemoProject).
+2026-10-23 18:46:47.224 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MemberUUID], [m].[Address], [m].[CreatedDate], [m].[DateOfBirth], [m].[Email], [m].[FirstName], [m].[Gender], [m].[IsActive], [m].[LastName], [m].[MemberID], [m].[MemberNumber], [m].[PhoneNumber], [m].[UpdatedDate]
+FROM [Members] AS [m]
+WHERE [m].[IsActive] = CAST(1 AS bit)
+2026-10-23 18:46:47.233 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.Data.Model.MemberModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:46:47.238 +05:30 [INF] Executed action DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject) in 28.4111ms
+2026-10-23 18:46:47.254 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject)'
+2026-10-23 18:46:47.258 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Member/getMembers - 200 null application/json; charset=utf-8 100.125ms
+2026-10-23 18:46:58.794 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Member/deleteMemberById/36233ae1-e28c-46f5-a27c-b17b1fe9a0fc - null null
+2026-10-23 18:46:58.802 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:46:58.804 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Member/deleteMemberById/36233ae1-e28c-46f5-a27c-b17b1fe9a0fc - 204 null null 9.7339ms
+2026-10-23 18:46:58.807 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Member/deleteMemberById/36233ae1-e28c-46f5-a27c-b17b1fe9a0fc - application/json null
+2026-10-23 18:46:58.818 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:46:58.820 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.MemberController.DeleteMember (DbDemoProject)'
+2026-10-23 18:46:58.828 +05:30 [INF] Route matched with {action = "DeleteMember", controller = "Member"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteMember(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.MemberController (DbDemoProject).
+2026-10-23 18:47:02.074 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[MemberUUID], [m].[Address], [m].[CreatedDate], [m].[DateOfBirth], [m].[Email], [m].[FirstName], [m].[Gender], [m].[IsActive], [m].[LastName], [m].[MemberID], [m].[MemberNumber], [m].[PhoneNumber], [m].[UpdatedDate]
+FROM [Members] AS [m]
+WHERE [m].[MemberUUID] = @__id_0
+2026-10-23 18:47:02.323 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Members] SET [IsActive] = @p0, [UpdatedDate] = @p1
+OUTPUT 1
+WHERE [MemberUUID] = @p2;
+2026-10-23 18:47:02.367 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2026-10-23 18:47:02.370 +05:30 [INF] Executed action DbDemoProject.Controllers.MemberController.DeleteMember (DbDemoProject) in 3537.1721ms
+2026-10-23 18:47:02.373 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.MemberController.DeleteMember (DbDemoProject)'
+2026-10-23 18:47:02.377 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Member/deleteMemberById/36233ae1-e28c-46f5-a27c-b17b1fe9a0fc - 200 0 null 3569.797ms
+2026-10-23 18:47:02.390 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Member/getMembers - null null
+2026-10-23 18:47:02.399 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:47:02.402 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Member/getMembers - 204 null null 13.2547ms
+2026-10-23 18:47:02.409 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Member/getMembers - application/json null
+2026-10-23 18:47:02.426 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:47:02.432 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject)'
+2026-10-23 18:47:02.434 +05:30 [INF] Route matched with {action = "GetMembers", controller = "Member"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMembers() on controller DbDemoProject.Controllers.MemberController (DbDemoProject).
+2026-10-23 18:47:02.453 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MemberUUID], [m].[Address], [m].[CreatedDate], [m].[DateOfBirth], [m].[Email], [m].[FirstName], [m].[Gender], [m].[IsActive], [m].[LastName], [m].[MemberID], [m].[MemberNumber], [m].[PhoneNumber], [m].[UpdatedDate]
+FROM [Members] AS [m]
+WHERE [m].[IsActive] = CAST(1 AS bit)
+2026-10-23 18:47:02.461 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.Data.Model.MemberModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:47:02.466 +05:30 [INF] Executed action DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject) in 24.6003ms
+2026-10-23 18:47:02.471 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject)'
+2026-10-23 18:47:02.474 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Member/getMembers - 200 null application/json; charset=utf-8 66.9544ms
+2026-10-23 18:51:47.434 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:51:47.455 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:51:47.458 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 204 null null 24.2953ms
+2026-10-23 18:51:47.470 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:51:47.518 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:51:47.523 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:51:47.537 +05:30 [INF] Route matched with {action = "GetProductUserDetails", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProductUserDetails(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:51:47.587 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__roleUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[NavigationMenuUUID], [n].[DisplayName], [n].[IsActive], [n].[IsParent], [n].[Order], [n].[ParentUUID], [n].[RoleUUID], [n].[URL]
+FROM [NavigationMenu] AS [n]
+WHERE [n].[IsActive] = CAST(1 AS bit) AND [n].[RoleUUID] = @__roleUUID_0
+2026-10-23 18:51:47.603 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.NavigationResponseModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:51:47.609 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject) in 56.1481ms
+2026-10-23 18:51:47.619 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:51:47.626 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 156.952ms
+2026-10-23 18:52:01.756 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:52:01.768 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:52:01.771 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 204 null null 15.6479ms
+2026-10-23 18:52:01.777 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:52:01.796 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:52:01.811 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:52:01.818 +05:30 [INF] Route matched with {action = "GetProductUserDetails", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProductUserDetails(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:52:01.843 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__roleUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[NavigationMenuUUID], [n].[DisplayName], [n].[IsActive], [n].[IsParent], [n].[Order], [n].[ParentUUID], [n].[RoleUUID], [n].[URL]
+FROM [NavigationMenu] AS [n]
+WHERE [n].[IsActive] = CAST(1 AS bit) AND [n].[RoleUUID] = @__roleUUID_0
+2026-10-23 18:52:01.856 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.NavigationResponseModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:52:01.861 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject) in 36.9773ms
+2026-10-23 18:52:01.867 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:52:01.869 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 92.2537ms
+2026-10-23 18:52:03.227 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Member/getMembers - null null
+2026-10-23 18:52:03.242 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:52:03.246 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Member/getMembers - 204 null null 19.1932ms
+2026-10-23 18:52:03.250 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Member/getMembers - application/json null
+2026-10-23 18:52:03.269 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:52:03.273 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject)'
+2026-10-23 18:52:03.277 +05:30 [INF] Route matched with {action = "GetMembers", controller = "Member"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMembers() on controller DbDemoProject.Controllers.MemberController (DbDemoProject).
+2026-10-23 18:52:03.297 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MemberUUID], [m].[Address], [m].[CreatedDate], [m].[DateOfBirth], [m].[Email], [m].[FirstName], [m].[Gender], [m].[IsActive], [m].[LastName], [m].[MemberID], [m].[MemberNumber], [m].[PhoneNumber], [m].[UpdatedDate]
+FROM [Members] AS [m]
+WHERE [m].[IsActive] = CAST(1 AS bit)
+2026-10-23 18:52:03.307 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.Data.Model.MemberModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:52:03.318 +05:30 [INF] Executed action DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject) in 33.5934ms
+2026-10-23 18:52:03.329 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject)'
+2026-10-23 18:52:03.336 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Member/getMembers - 200 null application/json; charset=utf-8 86.5946ms
+2026-10-23 18:54:42.738 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:54:42.759 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:54:42.763 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 204 null null 24.7302ms
+2026-10-23 18:54:42.769 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:54:42.793 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:54:42.796 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:54:42.799 +05:30 [INF] Route matched with {action = "GetProductUserDetails", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProductUserDetails(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:54:42.822 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__roleUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[NavigationMenuUUID], [n].[DisplayName], [n].[IsActive], [n].[IsParent], [n].[Order], [n].[ParentUUID], [n].[RoleUUID], [n].[URL]
+FROM [NavigationMenu] AS [n]
+WHERE [n].[IsActive] = CAST(1 AS bit) AND [n].[RoleUUID] = @__roleUUID_0
+2026-10-23 18:54:42.832 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.NavigationResponseModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:54:42.837 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject) in 33.7094ms
+2026-10-23 18:54:42.845 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:54:42.849 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 81.4321ms
+2026-10-23 18:54:51.807 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:54:51.820 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:54:51.825 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 204 null null 17.6027ms
+2026-10-23 18:54:51.830 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:54:51.845 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:54:51.849 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:54:51.864 +05:30 [INF] Route matched with {action = "GetProductUserDetails", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProductUserDetails(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:54:51.893 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__roleUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[NavigationMenuUUID], [n].[DisplayName], [n].[IsActive], [n].[IsParent], [n].[Order], [n].[ParentUUID], [n].[RoleUUID], [n].[URL]
+FROM [NavigationMenu] AS [n]
+WHERE [n].[IsActive] = CAST(1 AS bit) AND [n].[RoleUUID] = @__roleUUID_0
+2026-10-23 18:54:51.901 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.NavigationResponseModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:54:51.904 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject) in 25.2248ms
+2026-10-23 18:54:51.910 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:54:51.913 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 83.717ms
+2026-10-23 18:55:05.778 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:55:05.794 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:55:05.800 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 204 null null 22.6285ms
+2026-10-23 18:55:05.806 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:55:05.832 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:55:05.836 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:55:05.844 +05:30 [INF] Route matched with {action = "GetProductUserDetails", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProductUserDetails(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:55:05.875 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__roleUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[NavigationMenuUUID], [n].[DisplayName], [n].[IsActive], [n].[IsParent], [n].[Order], [n].[ParentUUID], [n].[RoleUUID], [n].[URL]
+FROM [NavigationMenu] AS [n]
+WHERE [n].[IsActive] = CAST(1 AS bit) AND [n].[RoleUUID] = @__roleUUID_0
+2026-10-23 18:55:05.884 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.NavigationResponseModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:55:05.894 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject) in 40.5251ms
+2026-10-23 18:55:05.909 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:55:05.913 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 107.3108ms
+2026-10-23 18:55:08.466 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Member/getMembers - null null
+2026-10-23 18:55:08.480 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:55:08.483 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Member/getMembers - 204 null null 17.596ms
+2026-10-23 18:55:08.488 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Member/getMembers - application/json null
+2026-10-23 18:55:08.504 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:55:08.508 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject)'
+2026-10-23 18:55:08.512 +05:30 [INF] Route matched with {action = "GetMembers", controller = "Member"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMembers() on controller DbDemoProject.Controllers.MemberController (DbDemoProject).
+2026-10-23 18:55:08.530 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MemberUUID], [m].[Address], [m].[CreatedDate], [m].[DateOfBirth], [m].[Email], [m].[FirstName], [m].[Gender], [m].[IsActive], [m].[LastName], [m].[MemberID], [m].[MemberNumber], [m].[PhoneNumber], [m].[UpdatedDate]
+FROM [Members] AS [m]
+WHERE [m].[IsActive] = CAST(1 AS bit)
+2026-10-23 18:55:08.545 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.Data.Model.MemberModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:55:08.551 +05:30 [INF] Executed action DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject) in 33.0927ms
+2026-10-23 18:55:08.555 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject)'
+2026-10-23 18:55:08.563 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Member/getMembers - 200 null application/json; charset=utf-8 75.8034ms
+2026-10-23 18:55:13.927 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/login - null null
+2026-10-23 18:55:13.935 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:55:13.938 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/login - 204 null null 11.264ms
+2026-10-23 18:55:13.943 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7071/api/Account/login - application/json 74
+2026-10-23 18:55:13.958 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:55:13.961 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-23 18:55:13.976 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(DbDemoProject.Model.LoginRequest) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:55:14.109 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@__loginRequest_UserName_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserUUID], [u].[EmailID], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[PasswordHash], [u].[PhoneNumber], [u].[ProductUUID], [u].[RoleUUID], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginRequest_UserName_0 AND [u].[IsActive] = CAST(1 AS bit)
+2026-10-23 18:55:14.555 +05:30 [INF] Executed DbCommand (32ms) [Parameters=[@__user_RoleUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleUUID], [r].[CreatedOn], [r].[IsActive], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleUUID] = @__user_RoleUUID_0
+2026-10-23 18:55:14.648 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__user_ProductUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ProductUUID], [p].[CreatedOn], [p].[IsActive], [p].[ProductName]
+FROM [Product] AS [p]
+WHERE [p].[ProductUUID] = @__user_ProductUUID_0
+2026-10-23 18:55:14.748 +05:30 [INF] Executing OkObjectResult, writing value of type 'DbDemoProject.Model.ApiResponseDto'.
+2026-10-23 18:55:14.785 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.Login (DbDemoProject) in 802.1484ms
+2026-10-23 18:55:14.794 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-23 18:55:14.800 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7071/api/Account/login - 200 null application/json; charset=utf-8 856.8073ms
+2026-10-23 18:55:15.841 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=cdd22b53-b594-4c47-9b80-52c005383399 - null null
+2026-10-23 18:55:15.848 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:55:15.851 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=cdd22b53-b594-4c47-9b80-52c005383399 - 204 null null 10.4435ms
+2026-10-23 18:55:15.857 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=cdd22b53-b594-4c47-9b80-52c005383399 - null null
+2026-10-23 18:55:15.875 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:55:15.878 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:55:15.881 +05:30 [INF] Route matched with {action = "GetProductUserDetails", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProductUserDetails(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:55:15.906 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@__roleUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[NavigationMenuUUID], [n].[DisplayName], [n].[IsActive], [n].[IsParent], [n].[Order], [n].[ParentUUID], [n].[RoleUUID], [n].[URL]
+FROM [NavigationMenu] AS [n]
+WHERE [n].[IsActive] = CAST(1 AS bit) AND [n].[RoleUUID] = @__roleUUID_0
+2026-10-23 18:55:15.913 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.NavigationResponseModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:55:15.918 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject) in 25.4743ms
+2026-10-23 18:55:15.920 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:55:15.924 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=cdd22b53-b594-4c47-9b80-52c005383399 - 200 null application/json; charset=utf-8 67.4566ms
+2026-10-23 18:55:15.955 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/getDashboard?roleUUID=cdd22b53-b594-4c47-9b80-52c005383399 - null null
+2026-10-23 18:55:15.965 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:55:15.968 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/getDashboard?roleUUID=cdd22b53-b594-4c47-9b80-52c005383399 - 204 null null 15.1034ms
+2026-10-23 18:55:15.974 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getDashboard?roleUUID=cdd22b53-b594-4c47-9b80-52c005383399 - null null
+2026-10-23 18:55:15.988 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:55:15.993 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject)'
+2026-10-23 18:55:15.998 +05:30 [INF] Route matched with {action = "GetDashboardItem", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetDashboardItem(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:55:16.024 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__roleUUID_Value_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DashbordUUID], [d].[RoleUUID], [d].[buttonLabel], [d].[gradient], [d].[icon], [d].[id], [d].[nameofTableCount], [d].[shadowColor], [d].[title], [d].[value], [d].[viewAllURL]
+FROM [DashboardItems] AS [d]
+WHERE [d].[RoleUUID] = @__roleUUID_Value_0
+2026-10-23 18:55:16.081 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.ResponseDTO.DashboardItemResponseDto, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:55:16.088 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject) in 83.6287ms
+2026-10-23 18:55:16.092 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject)'
+2026-10-23 18:55:16.096 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getDashboard?roleUUID=cdd22b53-b594-4c47-9b80-52c005383399 - 200 null application/json; charset=utf-8 123.6584ms
+2026-10-23 18:55:17.042 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-23 18:55:17.046 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Role/getActiveRole?type=master_user - null null
+2026-10-23 18:55:17.049 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:55:17.060 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:55:17.063 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/getActiveUsers - 204 null null 21.7052ms
+2026-10-23 18:55:17.072 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Role/getActiveRole?type=master_user - null null
+2026-10-23 18:55:17.068 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - null null
+2026-10-23 18:55:17.065 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Role/getActiveRole?type=master_user - 204 null null 20.5812ms
+2026-10-23 18:55:17.100 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:55:17.103 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:55:17.119 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.RoleController.GetActiveRole (DbDemoProject)'
+2026-10-23 18:55:17.122 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetActiveUsers (DbDemoProject)'
+2026-10-23 18:55:17.130 +05:30 [INF] Route matched with {action = "GetActiveRole", controller = "Role"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetActiveRole() on controller DbDemoProject.Controllers.RoleController (DbDemoProject).
+2026-10-23 18:55:17.143 +05:30 [INF] Route matched with {action = "GetActiveUsers", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetActiveUsers() on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:55:17.144 +05:30 [INF] Executing OkObjectResult, writing value of type 'Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[[DbDemoProject.Model.UserRoles, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:55:17.183 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[RoleUUID], [r].[CreatedOn], [r].[IsActive], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[IsActive] = CAST(1 AS bit)
+2026-10-23 18:55:17.206 +05:30 [INF] Executed action DbDemoProject.Controllers.RoleController.GetActiveRole (DbDemoProject) in 67.6543ms
+2026-10-23 18:55:17.212 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.RoleController.GetActiveRole (DbDemoProject)'
+2026-10-23 18:55:17.216 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Role/getActiveRole?type=master_user - 200 null application/json; charset=utf-8 146.0028ms
+2026-10-23 18:55:17.382 +05:30 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserUUID], [u].[UserName], [u].[FirstName], [u].[LastName], [r].[RoleUUID], [r].[RoleName] AS [Rolename], [p].[ProductUUID], [p].[ProductName], [u].[IsActive]
+FROM [Users] AS [u]
+LEFT JOIN [Roles] AS [r] ON [u].[RoleUUID] = [r].[RoleUUID]
+LEFT JOIN [Product] AS [p] ON [u].[ProductUUID] = [p].[ProductUUID]
+WHERE [u].[IsActive] = CAST(1 AS bit)
+2026-10-23 18:55:17.398 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.ResponseDTO.SystemUserResponseDto, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:55:17.416 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetActiveUsers (DbDemoProject) in 265.526ms
+2026-10-23 18:55:17.419 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetActiveUsers (DbDemoProject)'
+2026-10-23 18:55:17.423 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getActiveUsers - 200 null application/json; charset=utf-8 355.8262ms
+2026-10-23 18:55:52.424 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/login - null null
+2026-10-23 18:55:52.439 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:55:52.443 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/login - 204 null null 18.9332ms
+2026-10-23 18:55:52.447 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7071/api/Account/login - application/json 79
+2026-10-23 18:55:52.463 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:55:52.467 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-23 18:55:52.473 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(DbDemoProject.Model.LoginRequest) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:55:52.499 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__loginRequest_UserName_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserUUID], [u].[EmailID], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[PasswordHash], [u].[PhoneNumber], [u].[ProductUUID], [u].[RoleUUID], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginRequest_UserName_0 AND [u].[IsActive] = CAST(1 AS bit)
+2026-10-23 18:55:52.832 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__user_RoleUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleUUID], [r].[CreatedOn], [r].[IsActive], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleUUID] = @__user_RoleUUID_0
+2026-10-23 18:55:52.850 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__user_ProductUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ProductUUID], [p].[CreatedOn], [p].[IsActive], [p].[ProductName]
+FROM [Product] AS [p]
+WHERE [p].[ProductUUID] = @__user_ProductUUID_0
+2026-10-23 18:55:52.857 +05:30 [INF] Executing OkObjectResult, writing value of type 'DbDemoProject.Model.ApiResponseDto'.
+2026-10-23 18:55:52.862 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.Login (DbDemoProject) in 381.6277ms
+2026-10-23 18:55:52.867 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.Login (DbDemoProject)'
+2026-10-23 18:55:52.873 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7071/api/Account/login - 200 null application/json; charset=utf-8 426.6748ms
+2026-10-23 18:55:53.901 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:55:53.907 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:55:53.909 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 204 null null 8.5018ms
+2026-10-23 18:55:53.914 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:55:53.927 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:55:53.931 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject)'
+2026-10-23 18:55:53.933 +05:30 [INF] Route matched with {action = "GetDashboardItem", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetDashboardItem(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:55:53.954 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__roleUUID_Value_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DashbordUUID], [d].[RoleUUID], [d].[buttonLabel], [d].[gradient], [d].[icon], [d].[id], [d].[nameofTableCount], [d].[shadowColor], [d].[title], [d].[value], [d].[viewAllURL]
+FROM [DashboardItems] AS [d]
+WHERE [d].[RoleUUID] = @__roleUUID_Value_0
+2026-10-23 18:55:53.962 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.ResponseDTO.DashboardItemResponseDto, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:55:53.965 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject) in 25.6119ms
+2026-10-23 18:55:53.968 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject)'
+2026-10-23 18:55:53.971 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 58.3978ms
+2026-10-23 18:56:29.899 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Member/addMember - null null
+2026-10-23 18:56:29.913 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:56:29.915 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Member/addMember - 204 null null 17.1488ms
+2026-10-23 18:56:29.919 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7071/api/Member/addMember - application/json 156
+2026-10-23 18:56:29.945 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:56:29.951 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.MemberController.AddMember (DbDemoProject)'
+2026-10-23 18:56:29.965 +05:30 [INF] Route matched with {action = "AddMember", controller = "Member"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddMember(DbDemoProject.Model.Data.Model.MemberModel) on controller DbDemoProject.Controllers.MemberController (DbDemoProject).
+2026-10-23 18:56:34.499 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT MAX([m].[MemberNumber])
+FROM [Members] AS [m]
+2026-10-23 18:56:34.616 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 250), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 150), @p5='?' (Size = 100), @p6='?' (Size = 20), @p7='?' (DbType = Boolean), @p8='?' (Size = 100), @p9='?' (Size = 23), @p10='?' (Size = 20), @p11='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Members] ([MemberUUID], [Address], [CreatedDate], [DateOfBirth], [Email], [FirstName], [Gender], [IsActive], [LastName], [MemberID], [PhoneNumber], [UpdatedDate])
+OUTPUT INSERTED.[MemberNumber]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+2026-10-23 18:56:34.671 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2026-10-23 18:56:34.674 +05:30 [INF] Executed action DbDemoProject.Controllers.MemberController.AddMember (DbDemoProject) in 4693.2542ms
+2026-10-23 18:56:34.676 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.MemberController.AddMember (DbDemoProject)'
+2026-10-23 18:56:34.679 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7071/api/Member/addMember - 200 0 null 4760.1427ms
+2026-10-23 18:56:34.696 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Member/getMembers - null null
+2026-10-23 18:56:34.706 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:56:34.709 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Member/getMembers - 204 null null 13.4045ms
+2026-10-23 18:56:34.714 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Member/getMembers - application/json null
+2026-10-23 18:56:34.729 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:56:34.732 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject)'
+2026-10-23 18:56:34.737 +05:30 [INF] Route matched with {action = "GetMembers", controller = "Member"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMembers() on controller DbDemoProject.Controllers.MemberController (DbDemoProject).
+2026-10-23 18:56:34.754 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MemberUUID], [m].[Address], [m].[CreatedDate], [m].[DateOfBirth], [m].[Email], [m].[FirstName], [m].[Gender], [m].[IsActive], [m].[LastName], [m].[MemberID], [m].[MemberNumber], [m].[PhoneNumber], [m].[UpdatedDate]
+FROM [Members] AS [m]
+WHERE [m].[IsActive] = CAST(1 AS bit)
+2026-10-23 18:56:34.762 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.Data.Model.MemberModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:56:34.766 +05:30 [INF] Executed action DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject) in 22.2107ms
+2026-10-23 18:56:34.772 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject)'
+2026-10-23 18:56:34.776 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Member/getMembers - 200 null application/json; charset=utf-8 62.1234ms
+2026-10-23 18:56:44.968 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Member/updateMember - null null
+2026-10-23 18:56:44.976 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:56:44.978 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Member/updateMember - 204 null null 10.2489ms
+2026-10-23 18:56:44.982 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7071/api/Member/updateMember - application/json 206
+2026-10-23 18:56:45.002 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:56:45.006 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.MemberController.UpdateMember (DbDemoProject)'
+2026-10-23 18:56:45.018 +05:30 [INF] Route matched with {action = "UpdateMember", controller = "Member"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateMember(DbDemoProject.Model.Data.Model.MemberModel) on controller DbDemoProject.Controllers.MemberController (DbDemoProject).
+2026-10-23 18:56:48.391 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__memberModel_MemberUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[MemberUUID], [m].[Address], [m].[CreatedDate], [m].[DateOfBirth], [m].[Email], [m].[FirstName], [m].[Gender], [m].[IsActive], [m].[LastName], [m].[MemberID], [m].[MemberNumber], [m].[PhoneNumber], [m].[UpdatedDate]
+FROM [Members] AS [m]
+WHERE [m].[MemberUUID] = @__memberModel_MemberUUID_0
+2026-10-23 18:56:48.412 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Members] SET [UpdatedDate] = @p0
+OUTPUT 1
+WHERE [MemberUUID] = @p1;
+2026-10-23 18:56:48.422 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2026-10-23 18:56:48.424 +05:30 [INF] Executed action DbDemoProject.Controllers.MemberController.UpdateMember (DbDemoProject) in 3396.9563ms
+2026-10-23 18:56:48.429 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.MemberController.UpdateMember (DbDemoProject)'
+2026-10-23 18:56:48.433 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7071/api/Member/updateMember - 200 0 null 3451.0945ms
+2026-10-23 18:56:48.458 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Member/getMembers - null null
+2026-10-23 18:56:48.468 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:56:48.474 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Member/getMembers - 204 null null 16.8791ms
+2026-10-23 18:56:48.479 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Member/getMembers - application/json null
+2026-10-23 18:56:48.490 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:56:48.493 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject)'
+2026-10-23 18:56:48.497 +05:30 [INF] Route matched with {action = "GetMembers", controller = "Member"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMembers() on controller DbDemoProject.Controllers.MemberController (DbDemoProject).
+2026-10-23 18:56:48.514 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MemberUUID], [m].[Address], [m].[CreatedDate], [m].[DateOfBirth], [m].[Email], [m].[FirstName], [m].[Gender], [m].[IsActive], [m].[LastName], [m].[MemberID], [m].[MemberNumber], [m].[PhoneNumber], [m].[UpdatedDate]
+FROM [Members] AS [m]
+WHERE [m].[IsActive] = CAST(1 AS bit)
+2026-10-23 18:56:48.520 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.Data.Model.MemberModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:56:48.524 +05:30 [INF] Executed action DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject) in 20.7749ms
+2026-10-23 18:56:48.530 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject)'
+2026-10-23 18:56:48.534 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Member/getMembers - 200 null application/json; charset=utf-8 55.9288ms
+2026-10-23 18:56:52.895 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:56:52.901 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:56:52.904 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 204 null null 10.0396ms
+2026-10-23 18:56:52.907 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:56:52.920 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:56:52.923 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:56:52.925 +05:30 [INF] Route matched with {action = "GetProductUserDetails", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProductUserDetails(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:56:52.947 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__roleUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[NavigationMenuUUID], [n].[DisplayName], [n].[IsActive], [n].[IsParent], [n].[Order], [n].[ParentUUID], [n].[RoleUUID], [n].[URL]
+FROM [NavigationMenu] AS [n]
+WHERE [n].[IsActive] = CAST(1 AS bit) AND [n].[RoleUUID] = @__roleUUID_0
+2026-10-23 18:56:52.954 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.NavigationResponseModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:56:52.958 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject) in 28.8993ms
+2026-10-23 18:56:52.962 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:56:52.966 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 59.47ms
+2026-10-23 18:56:52.991 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Member/getMembers - application/json null
+2026-10-23 18:56:52.999 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:56:53.006 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject)'
+2026-10-23 18:56:53.010 +05:30 [INF] Route matched with {action = "GetMembers", controller = "Member"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMembers() on controller DbDemoProject.Controllers.MemberController (DbDemoProject).
+2026-10-23 18:56:53.029 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MemberUUID], [m].[Address], [m].[CreatedDate], [m].[DateOfBirth], [m].[Email], [m].[FirstName], [m].[Gender], [m].[IsActive], [m].[LastName], [m].[MemberID], [m].[MemberNumber], [m].[PhoneNumber], [m].[UpdatedDate]
+FROM [Members] AS [m]
+WHERE [m].[IsActive] = CAST(1 AS bit)
+2026-10-23 18:56:53.038 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.Data.Model.MemberModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:56:53.044 +05:30 [INF] Executed action DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject) in 27.4782ms
+2026-10-23 18:56:53.051 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject)'
+2026-10-23 18:56:53.055 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Member/getMembers - 200 null application/json; charset=utf-8 65.0354ms
+2026-10-23 18:56:59.965 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Member/updateMember - null null
+2026-10-23 18:56:59.970 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:56:59.972 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Member/updateMember - 204 null null 6.5847ms
+2026-10-23 18:56:59.975 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7071/api/Member/updateMember - application/json 206
+2026-10-23 18:56:59.989 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:56:59.992 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.MemberController.UpdateMember (DbDemoProject)'
+2026-10-23 18:56:59.994 +05:30 [INF] Route matched with {action = "UpdateMember", controller = "Member"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateMember(DbDemoProject.Model.Data.Model.MemberModel) on controller DbDemoProject.Controllers.MemberController (DbDemoProject).
+2026-10-23 18:57:00.012 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__memberModel_MemberUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[MemberUUID], [m].[Address], [m].[CreatedDate], [m].[DateOfBirth], [m].[Email], [m].[FirstName], [m].[Gender], [m].[IsActive], [m].[LastName], [m].[MemberID], [m].[MemberNumber], [m].[PhoneNumber], [m].[UpdatedDate]
+FROM [Members] AS [m]
+WHERE [m].[MemberUUID] = @__memberModel_MemberUUID_0
+2026-10-23 18:57:00.027 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Members] SET [UpdatedDate] = @p0
+OUTPUT 1
+WHERE [MemberUUID] = @p1;
+2026-10-23 18:57:00.037 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2026-10-23 18:57:00.039 +05:30 [INF] Executed action DbDemoProject.Controllers.MemberController.UpdateMember (DbDemoProject) in 40.7766ms
+2026-10-23 18:57:00.043 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.MemberController.UpdateMember (DbDemoProject)'
+2026-10-23 18:57:00.046 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7071/api/Member/updateMember - 200 0 null 71.8735ms
+2026-10-23 18:57:00.053 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Member/getMembers - null null
+2026-10-23 18:57:00.059 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:57:00.061 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Member/getMembers - 204 null null 8.4294ms
+2026-10-23 18:57:00.065 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Member/getMembers - application/json null
+2026-10-23 18:57:00.071 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:57:00.074 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject)'
+2026-10-23 18:57:00.076 +05:30 [INF] Route matched with {action = "GetMembers", controller = "Member"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMembers() on controller DbDemoProject.Controllers.MemberController (DbDemoProject).
+2026-10-23 18:57:00.089 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MemberUUID], [m].[Address], [m].[CreatedDate], [m].[DateOfBirth], [m].[Email], [m].[FirstName], [m].[Gender], [m].[IsActive], [m].[LastName], [m].[MemberID], [m].[MemberNumber], [m].[PhoneNumber], [m].[UpdatedDate]
+FROM [Members] AS [m]
+WHERE [m].[IsActive] = CAST(1 AS bit)
+2026-10-23 18:57:00.096 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.Data.Model.MemberModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:57:00.101 +05:30 [INF] Executed action DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject) in 18.9302ms
+2026-10-23 18:57:00.104 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject)'
+2026-10-23 18:57:00.107 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Member/getMembers - 200 null application/json; charset=utf-8 42.5022ms
+2026-10-23 18:57:14.620 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Member/updateMember - null null
+2026-10-23 18:57:14.625 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:57:14.626 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Member/updateMember - 204 null null 7.6029ms
+2026-10-23 18:57:14.630 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7071/api/Member/updateMember - application/json 206
+2026-10-23 18:57:14.642 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:57:14.644 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.MemberController.UpdateMember (DbDemoProject)'
+2026-10-23 18:57:14.647 +05:30 [INF] Route matched with {action = "UpdateMember", controller = "Member"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateMember(DbDemoProject.Model.Data.Model.MemberModel) on controller DbDemoProject.Controllers.MemberController (DbDemoProject).
+2026-10-23 18:57:28.652 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__memberModel_MemberUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[MemberUUID], [m].[Address], [m].[CreatedDate], [m].[DateOfBirth], [m].[Email], [m].[FirstName], [m].[Gender], [m].[IsActive], [m].[LastName], [m].[MemberID], [m].[MemberNumber], [m].[PhoneNumber], [m].[UpdatedDate]
+FROM [Members] AS [m]
+WHERE [m].[MemberUUID] = @__memberModel_MemberUUID_0
+2026-10-23 18:57:28.685 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (Size = 20), @p1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Members] SET [Gender] = @p0, [UpdatedDate] = @p1
+OUTPUT 1
+WHERE [MemberUUID] = @p2;
+2026-10-23 18:57:28.690 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2026-10-23 18:57:28.693 +05:30 [INF] Executed action DbDemoProject.Controllers.MemberController.UpdateMember (DbDemoProject) in 14040.1901ms
+2026-10-23 18:57:28.696 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.MemberController.UpdateMember (DbDemoProject)'
+2026-10-23 18:57:28.697 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7071/api/Member/updateMember - 200 0 null 14068.6815ms
+2026-10-23 18:57:28.715 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Member/getMembers - null null
+2026-10-23 18:57:28.723 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:57:28.725 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Member/getMembers - 204 null null 10.3872ms
+2026-10-23 18:57:28.727 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Member/getMembers - application/json null
+2026-10-23 18:57:28.738 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:57:28.740 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject)'
+2026-10-23 18:57:28.742 +05:30 [INF] Route matched with {action = "GetMembers", controller = "Member"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMembers() on controller DbDemoProject.Controllers.MemberController (DbDemoProject).
+2026-10-23 18:57:28.749 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MemberUUID], [m].[Address], [m].[CreatedDate], [m].[DateOfBirth], [m].[Email], [m].[FirstName], [m].[Gender], [m].[IsActive], [m].[LastName], [m].[MemberID], [m].[MemberNumber], [m].[PhoneNumber], [m].[UpdatedDate]
+FROM [Members] AS [m]
+WHERE [m].[IsActive] = CAST(1 AS bit)
+2026-10-23 18:57:28.758 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.Data.Model.MemberModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:57:28.762 +05:30 [INF] Executed action DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject) in 15.4714ms
+2026-10-23 18:57:28.766 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject)'
+2026-10-23 18:57:28.769 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Member/getMembers - 200 null application/json; charset=utf-8 42.0726ms
+2026-10-23 18:57:40.068 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:57:40.072 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:57:40.073 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 204 null null 5.7611ms
+2026-10-23 18:57:40.076 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:57:40.095 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:57:40.102 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject)'
+2026-10-23 18:57:40.117 +05:30 [INF] Route matched with {action = "GetDashboardItem", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetDashboardItem(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:57:40.134 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__roleUUID_Value_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DashbordUUID], [d].[RoleUUID], [d].[buttonLabel], [d].[gradient], [d].[icon], [d].[id], [d].[nameofTableCount], [d].[shadowColor], [d].[title], [d].[value], [d].[viewAllURL]
+FROM [DashboardItems] AS [d]
+WHERE [d].[RoleUUID] = @__roleUUID_Value_0
+2026-10-23 18:57:40.139 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.ResponseDTO.DashboardItemResponseDto, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:57:40.149 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject) in 26.4716ms
+2026-10-23 18:57:40.154 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject)'
+2026-10-23 18:57:40.156 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 80.4282ms
+2026-10-23 18:58:04.761 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:58:04.770 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:58:04.772 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 204 null null 12.1924ms
+2026-10-23 18:58:04.777 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:58:04.794 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:58:04.797 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:58:04.810 +05:30 [INF] Route matched with {action = "GetProductUserDetails", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProductUserDetails(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:58:04.841 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[@__roleUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[NavigationMenuUUID], [n].[DisplayName], [n].[IsActive], [n].[IsParent], [n].[Order], [n].[ParentUUID], [n].[RoleUUID], [n].[URL]
+FROM [NavigationMenu] AS [n]
+WHERE [n].[IsActive] = CAST(1 AS bit) AND [n].[RoleUUID] = @__roleUUID_0
+2026-10-23 18:58:04.849 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.NavigationResponseModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:58:04.864 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject) in 45.3619ms
+2026-10-23 18:58:04.871 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:58:04.875 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 98.024ms
+2026-10-23 18:58:04.900 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:58:04.906 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:58:04.910 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 204 null null 10.5001ms
+2026-10-23 18:58:04.914 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:58:04.930 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:58:04.939 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject)'
+2026-10-23 18:58:04.943 +05:30 [INF] Route matched with {action = "GetDashboardItem", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetDashboardItem(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:58:04.964 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__roleUUID_Value_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DashbordUUID], [d].[RoleUUID], [d].[buttonLabel], [d].[gradient], [d].[icon], [d].[id], [d].[nameofTableCount], [d].[shadowColor], [d].[title], [d].[value], [d].[viewAllURL]
+FROM [DashboardItems] AS [d]
+WHERE [d].[RoleUUID] = @__roleUUID_Value_0
+2026-10-23 18:58:04.970 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.ResponseDTO.DashboardItemResponseDto, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:58:04.976 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject) in 26.6896ms
+2026-10-23 18:58:04.981 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject)'
+2026-10-23 18:58:04.984 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 69.5191ms
+2026-10-23 18:58:55.792 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:58:55.809 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:58:55.813 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 204 null null 22.4646ms
+2026-10-23 18:58:55.819 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:58:55.834 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:58:55.838 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:58:55.841 +05:30 [INF] Route matched with {action = "GetProductUserDetails", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProductUserDetails(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:58:55.853 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__roleUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[NavigationMenuUUID], [n].[DisplayName], [n].[IsActive], [n].[IsParent], [n].[Order], [n].[ParentUUID], [n].[RoleUUID], [n].[URL]
+FROM [NavigationMenu] AS [n]
+WHERE [n].[IsActive] = CAST(1 AS bit) AND [n].[RoleUUID] = @__roleUUID_0
+2026-10-23 18:58:55.862 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.NavigationResponseModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:58:55.869 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject) in 20.2409ms
+2026-10-23 18:58:55.883 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:58:55.888 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 70.6533ms
+2026-10-23 18:58:58.372 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:58:58.392 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:58:58.395 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 204 null null 23.5591ms
+2026-10-23 18:58:58.399 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:58:58.418 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:58:58.422 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject)'
+2026-10-23 18:58:58.426 +05:30 [INF] Route matched with {action = "GetDashboardItem", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetDashboardItem(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:58:58.451 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@__roleUUID_Value_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DashbordUUID], [d].[RoleUUID], [d].[buttonLabel], [d].[gradient], [d].[icon], [d].[id], [d].[nameofTableCount], [d].[shadowColor], [d].[title], [d].[value], [d].[viewAllURL]
+FROM [DashboardItems] AS [d]
+WHERE [d].[RoleUUID] = @__roleUUID_Value_0
+2026-10-23 18:58:58.460 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.ResponseDTO.DashboardItemResponseDto, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:58:58.467 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject) in 28.824ms
+2026-10-23 18:58:58.471 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject)'
+2026-10-23 18:58:58.474 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 76.2282ms
+2026-10-23 18:59:01.432 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:59:01.439 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:59:01.441 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 204 null null 9.2606ms
+2026-10-23 18:59:01.444 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:59:01.463 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:59:01.468 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:59:01.471 +05:30 [INF] Route matched with {action = "GetProductUserDetails", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProductUserDetails(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:59:01.491 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__roleUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[NavigationMenuUUID], [n].[DisplayName], [n].[IsActive], [n].[IsParent], [n].[Order], [n].[ParentUUID], [n].[RoleUUID], [n].[URL]
+FROM [NavigationMenu] AS [n]
+WHERE [n].[IsActive] = CAST(1 AS bit) AND [n].[RoleUUID] = @__roleUUID_0
+2026-10-23 18:59:01.499 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.NavigationResponseModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:59:01.505 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject) in 26.6698ms
+2026-10-23 18:59:01.509 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:59:01.516 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 72.4459ms
+2026-10-23 18:59:01.545 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:59:01.554 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:59:01.557 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject)'
+2026-10-23 18:59:01.560 +05:30 [INF] Route matched with {action = "GetDashboardItem", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetDashboardItem(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:59:01.577 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__roleUUID_Value_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DashbordUUID], [d].[RoleUUID], [d].[buttonLabel], [d].[gradient], [d].[icon], [d].[id], [d].[nameofTableCount], [d].[shadowColor], [d].[title], [d].[value], [d].[viewAllURL]
+FROM [DashboardItems] AS [d]
+WHERE [d].[RoleUUID] = @__roleUUID_Value_0
+2026-10-23 18:59:01.586 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.ResponseDTO.DashboardItemResponseDto, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:59:01.591 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject) in 24.4952ms
+2026-10-23 18:59:01.594 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject)'
+2026-10-23 18:59:01.598 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 54.163ms
+2026-10-23 18:59:03.764 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:59:03.771 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:59:03.772 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:59:03.774 +05:30 [INF] Route matched with {action = "GetProductUserDetails", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProductUserDetails(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:59:03.790 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__roleUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[NavigationMenuUUID], [n].[DisplayName], [n].[IsActive], [n].[IsParent], [n].[Order], [n].[ParentUUID], [n].[RoleUUID], [n].[URL]
+FROM [NavigationMenu] AS [n]
+WHERE [n].[IsActive] = CAST(1 AS bit) AND [n].[RoleUUID] = @__roleUUID_0
+2026-10-23 18:59:03.797 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.NavigationResponseModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:59:03.801 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject) in 22.3301ms
+2026-10-23 18:59:03.803 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:59:03.806 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 42.4462ms
+2026-10-23 18:59:03.824 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:59:03.834 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:59:03.836 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 204 null null 12.6084ms
+2026-10-23 18:59:03.841 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:59:03.850 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:59:03.852 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject)'
+2026-10-23 18:59:03.855 +05:30 [INF] Route matched with {action = "GetDashboardItem", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetDashboardItem(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:59:03.873 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__roleUUID_Value_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DashbordUUID], [d].[RoleUUID], [d].[buttonLabel], [d].[gradient], [d].[icon], [d].[id], [d].[nameofTableCount], [d].[shadowColor], [d].[title], [d].[value], [d].[viewAllURL]
+FROM [DashboardItems] AS [d]
+WHERE [d].[RoleUUID] = @__roleUUID_Value_0
+2026-10-23 18:59:03.881 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.ResponseDTO.DashboardItemResponseDto, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:59:03.885 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject) in 24.8452ms
+2026-10-23 18:59:03.888 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject)'
+2026-10-23 18:59:03.890 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 49.381ms
+2026-10-23 18:59:15.834 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:59:15.845 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:59:15.848 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 204 null null 14.0686ms
+2026-10-23 18:59:15.852 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:59:15.866 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:59:15.872 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:59:15.876 +05:30 [INF] Route matched with {action = "GetProductUserDetails", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProductUserDetails(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:59:15.889 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__roleUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[NavigationMenuUUID], [n].[DisplayName], [n].[IsActive], [n].[IsParent], [n].[Order], [n].[ParentUUID], [n].[RoleUUID], [n].[URL]
+FROM [NavigationMenu] AS [n]
+WHERE [n].[IsActive] = CAST(1 AS bit) AND [n].[RoleUUID] = @__roleUUID_0
+2026-10-23 18:59:15.898 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.NavigationResponseModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:59:15.902 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject) in 18.0204ms
+2026-10-23 18:59:15.907 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:59:15.911 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 59.2017ms
+2026-10-23 18:59:26.935 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:59:26.942 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:59:26.948 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 204 null null 13.7353ms
+2026-10-23 18:59:26.952 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:59:26.965 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:59:26.967 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:59:26.970 +05:30 [INF] Route matched with {action = "GetProductUserDetails", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProductUserDetails(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:59:26.985 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__roleUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[NavigationMenuUUID], [n].[DisplayName], [n].[IsActive], [n].[IsParent], [n].[Order], [n].[ParentUUID], [n].[RoleUUID], [n].[URL]
+FROM [NavigationMenu] AS [n]
+WHERE [n].[IsActive] = CAST(1 AS bit) AND [n].[RoleUUID] = @__roleUUID_0
+2026-10-23 18:59:26.992 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.NavigationResponseModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:59:26.997 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject) in 21.5266ms
+2026-10-23 18:59:27.001 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:59:27.003 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 51.9161ms
+2026-10-23 18:59:27.034 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:59:27.042 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:59:27.045 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 204 null null 12.545ms
+2026-10-23 18:59:27.051 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:59:27.063 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:59:27.066 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject)'
+2026-10-23 18:59:27.070 +05:30 [INF] Route matched with {action = "GetDashboardItem", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetDashboardItem(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:59:27.084 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__roleUUID_Value_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DashbordUUID], [d].[RoleUUID], [d].[buttonLabel], [d].[gradient], [d].[icon], [d].[id], [d].[nameofTableCount], [d].[shadowColor], [d].[title], [d].[value], [d].[viewAllURL]
+FROM [DashboardItems] AS [d]
+WHERE [d].[RoleUUID] = @__roleUUID_Value_0
+2026-10-23 18:59:27.094 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.ResponseDTO.DashboardItemResponseDto, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:59:27.099 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject) in 25.2771ms
+2026-10-23 18:59:27.103 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject)'
+2026-10-23 18:59:27.107 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 57.5345ms
+2026-10-23 18:59:28.509 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:59:28.517 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:59:28.520 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:59:28.523 +05:30 [INF] Route matched with {action = "GetProductUserDetails", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProductUserDetails(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:59:28.533 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__roleUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[NavigationMenuUUID], [n].[DisplayName], [n].[IsActive], [n].[IsParent], [n].[Order], [n].[ParentUUID], [n].[RoleUUID], [n].[URL]
+FROM [NavigationMenu] AS [n]
+WHERE [n].[IsActive] = CAST(1 AS bit) AND [n].[RoleUUID] = @__roleUUID_0
+2026-10-23 18:59:28.539 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.NavigationResponseModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:59:28.543 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject) in 14.3382ms
+2026-10-23 18:59:28.547 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:59:28.550 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 41.3288ms
+2026-10-23 18:59:28.583 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:59:28.591 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:59:28.597 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject)'
+2026-10-23 18:59:28.600 +05:30 [INF] Route matched with {action = "GetDashboardItem", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetDashboardItem(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:59:28.612 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__roleUUID_Value_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DashbordUUID], [d].[RoleUUID], [d].[buttonLabel], [d].[gradient], [d].[icon], [d].[id], [d].[nameofTableCount], [d].[shadowColor], [d].[title], [d].[value], [d].[viewAllURL]
+FROM [DashboardItems] AS [d]
+WHERE [d].[RoleUUID] = @__roleUUID_Value_0
+2026-10-23 18:59:28.625 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.ResponseDTO.DashboardItemResponseDto, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:59:28.632 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject) in 25.2323ms
+2026-10-23 18:59:28.635 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject)'
+2026-10-23 18:59:28.639 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 57.9504ms
+2026-10-23 18:59:39.939 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:59:39.957 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:59:39.959 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 204 null null 19.8871ms
+2026-10-23 18:59:39.964 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:59:39.977 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:59:39.985 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:59:39.991 +05:30 [INF] Route matched with {action = "GetProductUserDetails", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProductUserDetails(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:59:40.002 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__roleUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[NavigationMenuUUID], [n].[DisplayName], [n].[IsActive], [n].[IsParent], [n].[Order], [n].[ParentUUID], [n].[RoleUUID], [n].[URL]
+FROM [NavigationMenu] AS [n]
+WHERE [n].[IsActive] = CAST(1 AS bit) AND [n].[RoleUUID] = @__roleUUID_0
+2026-10-23 18:59:40.008 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.NavigationResponseModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:59:40.014 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject) in 15.4757ms
+2026-10-23 18:59:40.023 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:59:40.028 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 64.6483ms
+2026-10-23 18:59:41.281 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:59:41.286 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:59:41.287 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 204 null null 7.9334ms
+2026-10-23 18:59:41.292 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:59:41.305 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:59:41.312 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject)'
+2026-10-23 18:59:41.317 +05:30 [INF] Route matched with {action = "GetDashboardItem", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetDashboardItem(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:59:41.330 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__roleUUID_Value_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DashbordUUID], [d].[RoleUUID], [d].[buttonLabel], [d].[gradient], [d].[icon], [d].[id], [d].[nameofTableCount], [d].[shadowColor], [d].[title], [d].[value], [d].[viewAllURL]
+FROM [DashboardItems] AS [d]
+WHERE [d].[RoleUUID] = @__roleUUID_Value_0
+2026-10-23 18:59:41.338 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.ResponseDTO.DashboardItemResponseDto, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:59:41.343 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject) in 20.1122ms
+2026-10-23 18:59:41.348 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject)'
+2026-10-23 18:59:41.352 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 61.1073ms
+2026-10-23 18:59:56.337 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:59:56.343 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:59:56.348 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 204 null null 12.5447ms
+2026-10-23 18:59:56.351 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:59:56.359 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:59:56.365 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:59:56.367 +05:30 [INF] Route matched with {action = "GetProductUserDetails", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProductUserDetails(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:59:56.375 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__roleUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[NavigationMenuUUID], [n].[DisplayName], [n].[IsActive], [n].[IsParent], [n].[Order], [n].[ParentUUID], [n].[RoleUUID], [n].[URL]
+FROM [NavigationMenu] AS [n]
+WHERE [n].[IsActive] = CAST(1 AS bit) AND [n].[RoleUUID] = @__roleUUID_0
+2026-10-23 18:59:56.383 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.NavigationResponseModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:59:56.388 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject) in 16.5365ms
+2026-10-23 18:59:56.391 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 18:59:56.396 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 44.6496ms
+2026-10-23 18:59:56.444 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:59:56.451 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:59:56.453 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 204 null null 8.5106ms
+2026-10-23 18:59:56.455 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 18:59:56.469 +05:30 [INF] CORS policy execution successful.
+2026-10-23 18:59:56.472 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject)'
+2026-10-23 18:59:56.476 +05:30 [INF] Route matched with {action = "GetDashboardItem", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetDashboardItem(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 18:59:56.490 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__roleUUID_Value_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DashbordUUID], [d].[RoleUUID], [d].[buttonLabel], [d].[gradient], [d].[icon], [d].[id], [d].[nameofTableCount], [d].[shadowColor], [d].[title], [d].[value], [d].[viewAllURL]
+FROM [DashboardItems] AS [d]
+WHERE [d].[RoleUUID] = @__roleUUID_Value_0
+2026-10-23 18:59:56.498 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.ResponseDTO.DashboardItemResponseDto, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 18:59:56.500 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject) in 18.6143ms
+2026-10-23 18:59:56.504 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject)'
+2026-10-23 18:59:56.505 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 50.205ms
+2026-10-23 19:00:02.194 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 19:00:02.200 +05:30 [INF] CORS policy execution successful.
+2026-10-23 19:00:02.202 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 204 null null 7.5558ms
+2026-10-23 19:00:02.204 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 19:00:02.213 +05:30 [INF] CORS policy execution successful.
+2026-10-23 19:00:02.215 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 19:00:02.218 +05:30 [INF] Route matched with {action = "GetProductUserDetails", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProductUserDetails(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 19:00:02.227 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__roleUUID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[NavigationMenuUUID], [n].[DisplayName], [n].[IsActive], [n].[IsParent], [n].[Order], [n].[ParentUUID], [n].[RoleUUID], [n].[URL]
+FROM [NavigationMenu] AS [n]
+WHERE [n].[IsActive] = CAST(1 AS bit) AND [n].[RoleUUID] = @__roleUUID_0
+2026-10-23 19:00:02.233 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.NavigationResponseModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 19:00:02.238 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject) in 14.3309ms
+2026-10-23 19:00:02.241 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetProductUserDetails (DbDemoProject)'
+2026-10-23 19:00:02.244 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getProductUserDetails?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 40.323ms
+2026-10-23 19:00:02.294 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 19:00:02.301 +05:30 [INF] CORS policy execution successful.
+2026-10-23 19:00:02.305 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 204 null null 11.711ms
+2026-10-23 19:00:02.308 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 19:00:02.321 +05:30 [INF] CORS policy execution successful.
+2026-10-23 19:00:02.324 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject)'
+2026-10-23 19:00:02.327 +05:30 [INF] Route matched with {action = "GetDashboardItem", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetDashboardItem(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 19:00:02.339 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__roleUUID_Value_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DashbordUUID], [d].[RoleUUID], [d].[buttonLabel], [d].[gradient], [d].[icon], [d].[id], [d].[nameofTableCount], [d].[shadowColor], [d].[title], [d].[value], [d].[viewAllURL]
+FROM [DashboardItems] AS [d]
+WHERE [d].[RoleUUID] = @__roleUUID_Value_0
+2026-10-23 19:00:02.351 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.ResponseDTO.DashboardItemResponseDto, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 19:00:02.355 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject) in 21.1952ms
+2026-10-23 19:00:02.357 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject)'
+2026-10-23 19:00:02.361 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 53.8153ms
+2026-10-23 19:00:07.359 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Member/getMembers - null null
+2026-10-23 19:00:07.366 +05:30 [INF] CORS policy execution successful.
+2026-10-23 19:00:07.368 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Member/getMembers - 204 null null 9.8171ms
+2026-10-23 19:00:07.372 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Member/getMembers - application/json null
+2026-10-23 19:00:07.386 +05:30 [INF] CORS policy execution successful.
+2026-10-23 19:00:07.389 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject)'
+2026-10-23 19:00:07.402 +05:30 [INF] Route matched with {action = "GetMembers", controller = "Member"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMembers() on controller DbDemoProject.Controllers.MemberController (DbDemoProject).
+2026-10-23 19:00:07.418 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MemberUUID], [m].[Address], [m].[CreatedDate], [m].[DateOfBirth], [m].[Email], [m].[FirstName], [m].[Gender], [m].[IsActive], [m].[LastName], [m].[MemberID], [m].[MemberNumber], [m].[PhoneNumber], [m].[UpdatedDate]
+FROM [Members] AS [m]
+WHERE [m].[IsActive] = CAST(1 AS bit)
+2026-10-23 19:00:07.426 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.Data.Model.MemberModel, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 19:00:07.439 +05:30 [INF] Executed action DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject) in 32.1515ms
+2026-10-23 19:00:07.443 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.MemberController.GetMembers (DbDemoProject)'
+2026-10-23 19:00:07.447 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Member/getMembers - 200 null application/json; charset=utf-8 75.9475ms
+2026-10-23 19:00:20.167 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/getUserByRole?rolename=Doctor - null null
+2026-10-23 19:00:20.172 +05:30 [INF] CORS policy execution successful.
+2026-10-23 19:00:20.175 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/getUserByRole?rolename=Doctor - 204 null null 9.0953ms
+2026-10-23 19:00:20.180 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getUserByRole?rolename=Doctor - null null
+2026-10-23 19:00:20.194 +05:30 [INF] CORS policy execution successful.
+2026-10-23 19:00:20.198 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetUserByRole (DbDemoProject)'
+2026-10-23 19:00:20.212 +05:30 [INF] Route matched with {action = "GetUserByRole", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserByRole(System.String) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 19:00:20.277 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@__ToLower_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserUUID], [u].[UserName], [r].[RoleUUID], [r].[RoleName] AS [Rolename]
+FROM [Users] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleUUID] = [r].[RoleUUID]
+WHERE LOWER([r].[RoleName]) = @__ToLower_0
+2026-10-23 19:00:20.287 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.ResponseDTO.SystemUserResponseDto, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 19:00:20.295 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetUserByRole (DbDemoProject) in 77.1009ms
+2026-10-23 19:00:20.300 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetUserByRole (DbDemoProject)'
+2026-10-23 19:00:20.302 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getUserByRole?rolename=Doctor - 200 null application/json; charset=utf-8 122.3682ms
+2026-10-23 19:03:01.289 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 19:03:01.299 +05:30 [INF] CORS policy execution successful.
+2026-10-23 19:03:01.303 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 204 null null 14.0623ms
+2026-10-23 19:03:01.310 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2026-10-23 19:03:01.332 +05:30 [INF] CORS policy execution successful.
+2026-10-23 19:03:01.335 +05:30 [INF] Executing endpoint 'DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject)'
+2026-10-23 19:03:01.338 +05:30 [INF] Route matched with {action = "GetDashboardItem", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetDashboardItem(System.Nullable`1[System.Guid]) on controller DbDemoProject.Controllers.AccountController (DbDemoProject).
+2026-10-23 19:03:01.359 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__roleUUID_Value_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DashbordUUID], [d].[RoleUUID], [d].[buttonLabel], [d].[gradient], [d].[icon], [d].[id], [d].[nameofTableCount], [d].[shadowColor], [d].[title], [d].[value], [d].[viewAllURL]
+FROM [DashboardItems] AS [d]
+WHERE [d].[RoleUUID] = @__roleUUID_Value_0
+2026-10-23 19:03:01.367 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DbDemoProject.Model.ResponseDTO.DashboardItemResponseDto, DbDemoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-23 19:03:01.372 +05:30 [INF] Executed action DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject) in 26.8004ms
+2026-10-23 19:03:01.375 +05:30 [INF] Executed endpoint 'DbDemoProject.Controllers.AccountController.GetDashboardItem (DbDemoProject)'
+2026-10-23 19:03:01.379 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Account/getDashboard?roleUUID=3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 68.7548ms

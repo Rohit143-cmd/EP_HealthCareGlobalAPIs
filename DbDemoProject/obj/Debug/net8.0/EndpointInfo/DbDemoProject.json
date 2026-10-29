@@ -232,6 +232,155 @@
         }
       }
     },
+    "/api/Appointment/bookAppointment": {
+      "post": {
+        "tags": [
+          "Appointment"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AppointmentRequestModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AppointmentRequestModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AppointmentRequestModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Appointment/getAppointment": {
+      "get": {
+        "tags": [
+          "Appointment"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Appointment/getAppointmentByUser/{userUUID}": {
+      "get": {
+        "tags": [
+          "Appointment"
+        ],
+        "parameters": [
+          {
+            "name": "userUUID",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Letter/addLetter": {
+      "post": {
+        "tags": [
+          "Letter"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "DocumentName",
+                  "DocumentType",
+                  "FileByte"
+                ],
+                "type": "object",
+                "properties": {
+                  "DocumentName": {
+                    "type": "string"
+                  },
+                  "DocumentType": {
+                    "type": "string"
+                  },
+                  "FileByte": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "DocumentName": {
+                  "style": "form"
+                },
+                "DocumentType": {
+                  "style": "form"
+                },
+                "FileByte": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Letter/getLetter": {
+      "get": {
+        "tags": [
+          "Letter"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Letter/generateAppointmentLetter": {
+      "get": {
+        "tags": [
+          "Letter"
+        ],
+        "parameters": [
+          {
+            "name": "appointmentUUID",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Member/getMembers": {
       "get": {
         "tags": [
@@ -475,6 +624,100 @@
   },
   "components": {
     "schemas": {
+      "AppointmentRequestModel": {
+        "type": "object",
+        "properties": {
+          "memberUUID": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "appointmentUUID": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "memberID": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "doctorName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "maxLength": 255,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "gender": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "appointmentDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "appointmentTime": {
+            "type": "string",
+            "format": "time",
+            "nullable": true
+          },
+          "assignDoctorUUID": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "paymentMode": {
+            "type": "string",
+            "nullable": true
+          },
+          "transactionUUID": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "paymentStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "LoginRequest": {
         "type": "object",
         "properties": {

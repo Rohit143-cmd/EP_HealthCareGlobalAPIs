@@ -4,6 +4,7 @@ using DbDemoProject.Model;
 using DbDemoProject.Repository.Account;
 using DbDemoProject.Service;
 using DbDemoProject.Service.Account;
+using DbDemoProject.Service.Admin;
 using DbDemoProject.Service.Appointment;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -122,6 +123,9 @@ builder.Services.AddScoped<INavigationMenuService, NavigationMenuService>();
 builder.Services.AddScoped<INavigationMenuRepository, NavigationMenuRepository>();
 builder.Services.AddScoped<IDashbordItems, DashboardItemService>();
 builder.Services.AddScoped<IMemberService, MemberService>();
+builder.Services.AddScoped<IAppointmentService, AppointmentService>();
+builder.Services.AddScoped<ILetterService, LetterService>();
+builder.Services.AddScoped<DbContextHelper>();
 
 
 // Password Hasher

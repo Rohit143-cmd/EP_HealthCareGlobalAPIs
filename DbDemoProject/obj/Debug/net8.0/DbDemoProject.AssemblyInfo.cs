@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DbDemoProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+12f6fcf4d1d52d9306571b13fda370524dc0c943")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b8c2eba6ae06c8ab8a26aa251d0612765e2a08ca")]
 [assembly: System.Reflection.AssemblyProductAttribute("DbDemoProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DbDemoProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

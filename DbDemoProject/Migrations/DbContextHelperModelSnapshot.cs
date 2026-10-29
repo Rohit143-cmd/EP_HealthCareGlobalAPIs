@@ -31,6 +31,9 @@ namespace DbDemoProject.Migrations
                     b.Property<DateTime>("AppointmentDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<TimeOnly?>("AppointmentTime")
+                        .HasColumnType("time");
+
                     b.Property<string>("AppointmentType")
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
@@ -41,6 +44,9 @@ namespace DbDemoProject.Migrations
                     b.Property<string>("Description")
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
+
+                    b.Property<Guid?>("DoctorUUID")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
@@ -111,6 +117,35 @@ namespace DbDemoProject.Migrations
                     b.ToTable("DashboardItems");
                 });
 
+            modelBuilder.Entity("DbDemoProject.Model.Data.Model.LetterModel", b =>
+                {
+                    b.Property<Guid?>("LetterUUID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DocumentName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DocumentType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<byte[]>("FileByte")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.HasKey("LetterUUID");
+
+                    b.ToTable("Letter");
+                });
+
             modelBuilder.Entity("DbDemoProject.Model.Data.Model.MemberModel", b =>
                 {
                     b.Property<Guid>("MemberUUID")
@@ -150,6 +185,7 @@ namespace DbDemoProject.Migrations
 
                     b.Property<string>("MemberID")
                         .IsRequired()
+                        .ValueGeneratedOnAdd()
                         .HasMaxLength(23)
                         .HasColumnType("nvarchar(23)");
 

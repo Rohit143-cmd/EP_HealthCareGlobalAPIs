@@ -85,6 +85,7 @@ namespace DbDemoProject.Service.Appointment
                 result.PhoneNumber = memberModel.PhoneNumber;
                 result.Address = memberModel.Address;
                 result.DateOfBirth = memberModel.DateOfBirth;
+                result.Gender = memberModel.Gender;
                 result.UpdatedDate = DateTime.Now;
                 //_dbContextHelper.Member.Update(result);
                 return _dbContextHelper.SaveChanges();

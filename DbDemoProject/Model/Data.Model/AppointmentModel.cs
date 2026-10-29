@@ -11,9 +11,11 @@ namespace DbDemoProject.Model.Data.Model
 
         [Required]
         public Guid MemberUUID { get; set; }
+        public Guid? DoctorUUID { get; set; }
 
         [Required]
         public DateTime AppointmentDate { get; set; }
+        public TimeOnly? AppointmentTime { get; set; }
 
         [StringLength(100)]
         public string? AppointmentType { get; set; }
